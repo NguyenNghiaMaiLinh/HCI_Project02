@@ -73,7 +73,10 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivityForResult(intent, REGISTER_ACTIVITY);
     }
-
+    public  void onDangky(View view ){
+        Intent intent = new Intent(this, FormRegister.class);
+        startActivityForResult(intent, REGISTER_ACTIVITY);
+    }
     public void onLienHe(View view){
         Uri uri = Uri.parse("tel:1900 5656");
         Intent intent1 = new Intent(Intent.ACTION_VIEW, uri);
