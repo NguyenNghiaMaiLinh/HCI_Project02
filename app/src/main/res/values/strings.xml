@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">AppStore</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="names">
+        <item>Thành phố</item>
+        <item>Đà Lạt</item>
+        <item>Hồ Chí Minh</item>
+        <item>Hội An</item>
+        <item>Huế</item>
+        <item>Hà Nội</item>
+        <item>Hải Dương</item>
+        <item>Hải Phòng</item>
+    </string-array>
+    <string-array name="danhnghieps">
+        <item>Loại hình danh nghiệp</item>
+        <item>Công ty một thành viên</item>
+        <item>Công ty hợp danh</item>
+        <item>Công ty tư nhân</item>
+        <item>Công ty cổ phần</item>
+        <item>Kinh doanh hộ gia đình</item>
+
+    </string-array>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+</resources>
