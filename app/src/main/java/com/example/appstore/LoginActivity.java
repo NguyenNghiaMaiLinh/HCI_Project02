@@ -47,6 +47,7 @@ public class LoginActivity extends AppCompatActivity {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
+                    onOpenDialog();
                     onCreateDialog();
                     kProgressHUD.dismiss();
 
@@ -76,6 +77,26 @@ public class LoginActivity extends AppCompatActivity {
     public  void onDangky(View view ){
         Intent intent = new Intent(this, FormRegister.class);
         startActivityForResult(intent, REGISTER_ACTIVITY);
+    }
+    protected Dialog onOpenDialog() {
+        return new AlertDialog.Builder(this)
+                .setIcon(R.drawable.ic_location)
+                .setTitle("Cho phép Nhà Vườn truy cập cị trí của thiết bị này?")
+                .setPositiveButton("Cho phép",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                LoginActivity.this.startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            }
+                        })
+                .setNegativeButton("Từ chối",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                LoginActivity.this.startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            }
+                        })
+                .show();
     }
     public void onLienHe(View view){
         Uri uri = Uri.parse("tel:1900 5656");
