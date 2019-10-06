@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_marginVertical="200dp"
     android:layout_height="320dp"
+    android:layout_marginVertical="200dp"
     tools:context=".DialogActivity">
 
     <androidx.cardview.widget.CardView
@@ -18,9 +18,9 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:padding="15dp"
                 android:text="Đăng ký làm người bán của Nhà Vườn!"
                 android:textColor="@color/black"
@@ -32,8 +32,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
                 android:layout_marginBottom="30dp"
+                android:padding="10dp"
                 android:text="Dễ thôi! Chỉ cần đăng ký tại đây hoặc yêu cầu chúng tôi trợ giúp." />
 
             <Button
@@ -42,9 +42,8 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/dangky_button"
-                android:text="Đăng ký"
-
-                />
+                android:onClick="onDangky"
+                android:text="Đăng ký" />
 
             <Button
                 android:layout_width="match_parent"
@@ -52,13 +51,11 @@
                 android:layout_marginVertical="10dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:onClick="onLienHe"
                 android:background="@drawable/lienhe_button"
+                android:onClick="onLienHe"
                 android:text="Liên hệ chúng tôi" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

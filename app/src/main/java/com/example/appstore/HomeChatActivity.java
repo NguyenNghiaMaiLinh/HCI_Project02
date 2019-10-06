@@ -7,13 +7,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class ChatActivity extends AppCompatActivity {
+public class HomeChatActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolBar2);
+        setContentView(R.layout.activity_home_chat);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolBar1);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -22,8 +22,12 @@ public class ChatActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), HomeChatActivity.class));
+                startActivity(new Intent(getApplicationContext(), DashboardStoreActivity.class));
             }
         });
+    }
+    public void onChat(View view){
+        Intent intent = new Intent(getApplicationContext(), ChatActivity.class);
+        startActivity(intent);
     }
 }
