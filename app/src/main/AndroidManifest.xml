@@ -26,6 +26,8 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".ChatActivity" />
         <activity android:name=".FormRegister" />
+        <activity android:name=".BookingDetailsActivity" />
+        <activity android:name=".BookingListActivity" />
         <activity
             android:name=".MainActivity"/>
 <!--            android:label="@string/app_name"-->
