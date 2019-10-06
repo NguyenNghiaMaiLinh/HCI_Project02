@@ -1,5 +1,6 @@
 package com.example.appstore;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -100,5 +101,9 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+    public void clickToCreateProduct(View view) {
+        Intent intent = new Intent(getApplicationContext(), CreateProductActivity.class);
+        startActivity(intent);
     }
 }
