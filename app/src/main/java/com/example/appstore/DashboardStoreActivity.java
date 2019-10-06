@@ -1,13 +1,18 @@
 package com.example.appstore;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 
-public class DashboardStoreActivity extends AppCompatActivity {
+import com.google.android.material.navigation.NavigationView;
+
+public class DashboardStoreActivity extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,5 +28,20 @@ public class DashboardStoreActivity extends AppCompatActivity {
     public void clickToBookingList(View view) {
         Intent intent = new Intent(getApplicationContext(), BookingListActivity.class);
         startActivity(intent);
+    }
+    public void onHomeChat(View view){
+        Intent intent = new Intent(getApplicationContext(), HomeChatActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        return false;
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
     }
 }

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightgray"
     tools:context=".HomeChatActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -14,28 +13,29 @@
         android:accessibilityPaneTitle="">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolBar"
+            android:id="@+id/toolBar1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_collapseMode="pin"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:title="">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/profile"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/ic_account_circle_green_24dp" />
+            <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                <!--android:layout_marginLeft="60dp"-->
+                <!--android:id="@+id/profile"-->
+                <!--android:layout_width="30dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:background="@drawable/ic_account_circle_green_24dp" />-->
 
-            <TextView
-                android:id="@+id/username"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:text="Hai Lua"
-                android:textColor="#fff"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+            <!--<TextView-->
+                <!--android:id="@+id/username"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:text="Hai Lua"-->
+                <!--android:textColor="#fff"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textStyle="bold" />-->
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -54,108 +54,204 @@
             android:padding="8dp">
 
             <LinearLayout
+                android:onClick="onChat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
                 android:orientation="horizontal">
 
-                <de.hdodenhof.circleimageview.CircleImageView
+                <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:scaleType="fitXY"
-                    android:background="@drawable/circelbackgroundgray"
                     android:src="@drawable/user" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:text="Gia Phát"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
 
-                <TextView
-                    android:layout_marginTop="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:padding="8dp"
-                    android:textAlignment="center"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:text="Tôi cần cửa hàng tư vấn một chút" />
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-thin"
+        android:textStyle="bold"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:text="Cho tôi hỏi về giá dịch vụ" />
+</LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout
+                android:onClick="onChat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="60dp"
                 android:orientation="horizontal">
 
-                <de.hdodenhof.circleimageview.CircleImageView
+                <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:scaleType="fitXY"
-                    android:background="@drawable/circelbackgroundgray"
-                    android:src="@drawable/user" />
-
-                <TextView
-                    android:layout_marginTop="5dp"
+                    android:padding="5dp"
+                    android:src="@drawable/user1" />
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:padding="8dp"
-                    android:textAlignment="center"
-                    android:text="Tôi cần cửa hàng tư vấn một chút" />
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:textColor="@color/black"
+                        android:text="Kim Anh"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:textAlignment="center"
+                        android:fontFamily="sans-serif-thin"
+                        android:textSize="14dp"
+                        android:text="Tôi cần cửa hàng tư vấn một chút"
+/>
+                </LinearLayout>
+
             </LinearLayout>
             <LinearLayout
+                android:onClick="onChat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="120dp"
                 android:orientation="horizontal">
 
-                <de.hdodenhof.circleimageview.CircleImageView
+                <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:scaleType="fitXY"
-                    android:background="@drawable/circelbackgroundgray"
-                    android:src="@drawable/user" />
+                    android:padding="5dp"
+                    android:src="@drawable/ic_face_gray_24dp" />
 
-                <TextView
-                    android:layout_marginTop="5dp"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:padding="8dp"
-                    android:textAlignment="center"
-                    android:text="Tôi cần cửa hàng tư vấn một chút" />
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:textColor="@color/black"
+                        android:text="Phước Châu"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:textAlignment="center"
+                        android:fontFamily="sans-serif-thin"
+                        android:textSize="14dp"
+                        android:text="5 giờ chiều thứ 2"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:onClick="onChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="180dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="fitXY"
+                    android:padding="5dp"
+                    android:src="@drawable/user2" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:textColor="@color/black"
+                        android:text="Phước Châu"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="sans-serif-thin"
+                        android:textSize="14dp"
+                        android:text="Cửa hàng bao lâu nữa đến chỗ tôi?"
+                        />
+                </LinearLayout>
+=
+            </LinearLayout>
+            <LinearLayout
+                android:onClick="onChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="240dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="fitXY"
+                    android:padding="5dp"
+                    android:src="@drawable/user3" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:textColor="@color/black"
+                        android:text="Phước Châu"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:textAlignment="center"
+                        android:fontFamily="sans-serif-thin"
+                        android:textSize="14dp"
+                        android:text="rất hài vòng với dịch vụ cửa hàng"
+                        />
+                </LinearLayout>
+
             </LinearLayout>
         </RelativeLayout>
 
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <RelativeLayout
-        android:id="@+id/asd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="#fff"
-        android:padding="5dp">
 
-        <ImageView
-            android:id="@+id/k"
-            android:layout_width="46dp"
-            android:layout_height="46dp"
-            android:src="@drawable/ic_image_black_24dp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/btnSend"
-            android:layout_toRightOf="@+id/k"
-            android:hint="Type of message"
-
-            />
-
-        <ImageButton
-            android:id="@+id/btnSend"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/ic_send_black_24dp" />
-    </RelativeLayout>
 </RelativeLayout>
