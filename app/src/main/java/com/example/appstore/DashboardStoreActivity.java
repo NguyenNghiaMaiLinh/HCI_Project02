@@ -34,6 +34,11 @@ public class DashboardStoreActivity extends AppCompatActivity  implements Naviga
         startActivity(intent);
     }
 
+    public void clickToBookingFinishedList(View view) {
+        Intent intent = new Intent(getApplicationContext(), BookingFinishedListActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         return false;

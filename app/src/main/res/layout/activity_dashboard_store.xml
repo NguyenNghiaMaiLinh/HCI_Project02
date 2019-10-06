@@ -60,7 +60,6 @@
             android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
-        android:onClick="clickToBookingList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp">
@@ -98,6 +97,7 @@
             android:orientation="horizontal"
             android:gravity="center">
             <LinearLayout
+                android:onClick="clickToBookingList"
                 android:layout_marginRight="50dp"
                 android:gravity="center"
                 android:layout_width="wrap_content"
@@ -114,6 +114,7 @@
                     android:textSize="16dp" />
             </LinearLayout>
             <LinearLayout
+                android:onClick="clickToBookingFinishedList"
                 android:gravity="center"
                 android:layout_marginRight="70dp"
                 android:layout_width="wrap_content"
