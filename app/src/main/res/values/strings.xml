@@ -25,6 +25,14 @@
         <item>Vật dụng</item>
         <item>Trang trí</item>
     </string-array>
+    <string-array name="nganhang">
+        <item>Sacombank</item>
+        <item>Techcombank</item>
+        <item>Vietinbank</item>
+        <item>TPbank</item>
+        <item>Vietcombank</item>
+        <item>Eximbank</item>
+    </string-array>
     <string-array name="danhnghieps">
         <item>Loại hình danh nghiệp</item>
         <item>Công ty một thành viên</item>
