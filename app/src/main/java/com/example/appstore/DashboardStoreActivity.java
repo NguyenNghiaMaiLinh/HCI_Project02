@@ -19,4 +19,9 @@ public class DashboardStoreActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), CreateProductActivity.class);
         startActivity(intent);
     }
+
+    public void clickToBookingList(View view) {
+        Intent intent = new Intent(getApplicationContext(), BookingListActivity.class);
+        startActivity(intent);
+    }
 }
