@@ -2,6 +2,7 @@ package com.example.appstore;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -56,12 +57,13 @@ public class FormRegister extends AppCompatActivity {
             email1.setError("Email không đang rỗng");
         } else if (!email1.getText().toString().matches(emailPattern)) {
             Toast.makeText(this, "Email không hợp lệ", Toast.LENGTH_LONG).show();
-        } else if (!spinner1.callOnClick()) {
-            Toast.makeText(this, "Thành phố chưa được chọn", Toast.LENGTH_LONG).show();
-        } else if (!spinner2.callOnClick()) {
-            Toast.makeText(this, "Loại hình doanh nghiệp chưa được chọn", Toast.LENGTH_LONG).show();
+//        } else if (!spinner1.callOnClick()) {
+//            Toast.makeText(this, "Thành phố chưa được chọn", Toast.LENGTH_LONG).show();
+//        } else if (!spinner2.callOnClick()) {
+//            Toast.makeText(this, "Loại hình doanh nghiệp chưa được chọn", Toast.LENGTH_LONG).show();
         } else {
-             Toast.makeText(FormRegister.this, "Thành công", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
         }
     }
 }

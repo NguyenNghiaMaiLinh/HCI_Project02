@@ -6,6 +6,7 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="recent_news">News</string>
     <string-array name="names">
         <item>Thành phố</item>
         <item>Đà Lạt</item>
@@ -15,6 +16,14 @@
         <item>Hà Nội</item>
         <item>Hải Dương</item>
         <item>Hải Phòng</item>
+    </string-array>
+    <string-array name="category">
+        <item>Hoa</item>
+        <item>Cây cảnh</item>
+        <item>Cây mini</item>
+        <item>Đất trồng</item>
+        <item>Vật dụng</item>
+        <item>Trang trí</item>
     </string-array>
     <string-array name="danhnghieps">
         <item>Loại hình danh nghiệp</item>
