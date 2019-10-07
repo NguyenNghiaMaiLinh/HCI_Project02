@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LichSuGiaoDichActivity"></activity>
+        <activity android:name=".UpdateProductActivity"></activity>
+        <activity android:name=".LichSuGiaoDichActivity" />
         <activity android:name=".RutTienActivity" />
         <activity android:name=".DoanhThuActivity" />
         <activity android:name=".ViActivity" />
-        <activity android:name=".LoginActivity"></activity>
         <activity android:name=".CreateProductActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".HomeChatActivity" />
@@ -24,6 +24,7 @@
         <activity android:name=".BookingListActivity" />
         <activity android:name=".BookingDetailsActivity" />
         <activity android:name=".BookingFinishedListActivity" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".BookingFinishedDetailsActivity" />
         <activity
             android:name=".DashboardStoreActivity"
@@ -36,4 +37,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>

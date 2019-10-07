@@ -17,7 +17,7 @@ import android.widget.Toast;
 
 import java.io.IOException;
 
-public class CreateProductActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class UpdateProductActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     Button selectImage;
     ImageView imageView;
@@ -26,7 +26,7 @@ public class CreateProductActivity extends AppCompatActivity implements AdapterV
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_product);
+        setContentView(R.layout.activity_update_product);
 
         Spinner spinner = findViewById(R.id.spinner1);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.category, android.R.layout.simple_spinner_item);
@@ -71,10 +71,5 @@ public class CreateProductActivity extends AppCompatActivity implements AdapterV
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
-    }
-
-    public void them(View view) {
-        Intent intent = new Intent(getApplicationContext(), DashboardStoreActivity.class);
-        startActivity(intent);
     }
 }
