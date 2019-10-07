@@ -62,7 +62,7 @@ public class FormRegister extends AppCompatActivity {
 //        } else if (!spinner2.callOnClick()) {
 //            Toast.makeText(this, "Loại hình doanh nghiệp chưa được chọn", Toast.LENGTH_LONG).show();
         } else {
-            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            Intent intent = new Intent(getApplicationContext(), DashboardStoreActivity.class);
             startActivity(intent);
         }
     }

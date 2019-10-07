@@ -13,7 +13,7 @@ public class HomeChatActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_chat);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolBar1);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolBar12);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
