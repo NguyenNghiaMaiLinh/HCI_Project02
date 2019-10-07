@@ -18,9 +18,13 @@
         <item>Hải Phòng</item>
     </string-array>
     <string-array name="category">
-        <item>Sản phẩm</item>
-        <item>Dịch vụ</item>
+        <item>Cây cảnh</item>
+        <item>Vật dụng</item>
+        <item>Đất trồng</item>
         <item>Phân bón</item>
+        <item>Cắt cỏ</item>
+        <item>Tỉa cành</item>
+        <item>Trồng cây</item>
     </string-array>
     <string-array name="nganhang">
         <item>Sacombank</item>

@@ -13,6 +13,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -23,6 +25,8 @@ public class UpdateProductActivity extends AppCompatActivity implements AdapterV
     Button selectImage;
     ImageView imageView;
     private int REQUEST_CODE = 1;
+    RadioGroup radioGroup;
+    RadioButton radioButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +45,7 @@ public class UpdateProductActivity extends AppCompatActivity implements AdapterV
                 startActivity(new Intent(getApplicationContext(), DashboardStoreActivity.class));
             }
         });
+        radioGroup = findViewById(R.id.groupb);
 
         Spinner spinner = findViewById(R.id.spinner1);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.category, android.R.layout.simple_spinner_item);
@@ -85,5 +90,10 @@ public class UpdateProductActivity extends AppCompatActivity implements AdapterV
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    public void rbclick(View view) {
+        int rdbtID = radioGroup.getCheckedRadioButtonId();
+        radioButton = (RadioButton)findViewById(rdbtID);
     }
 }
