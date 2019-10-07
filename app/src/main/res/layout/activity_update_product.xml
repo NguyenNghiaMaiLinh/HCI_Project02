@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CreateProductActivity">
+    tools:context=".UpdateProductActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_layout"
@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="70dp"
                 android:paddingTop="10dp"
-                android:text="Thêm sản phẩm"
+                android:text="Sửa sản phẩm"
                 android:textColor="@color/white"
                 android:textSize="22dp"
                 android:textStyle="bold" />
@@ -85,6 +85,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="Cây kim tiền"
                     android:hint="Tên sản phẩm" />
             </LinearLayout>
 
@@ -98,6 +99,9 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="Cây Kim Tiền đem tài lộc và may mắn cho chủ nhân.
+Chậu cây xanh xinh tạo điểm nhấn cho góc làm việc.
+Cây xanh giúp giảm căng thẳng, hút bức xạ điện tử."
                     android:hint="Mô tả sản phẩm" />
             </LinearLayout>
 
@@ -168,6 +172,7 @@
                 android:layout_width="wrap_content"
                 android:textStyle="normal"
                 android:textSize="18dp"
+                android:text="185.000"
                 android:layout_marginLeft="10dp"
                 android:layout_height="wrap_content"/>
 
@@ -179,17 +184,34 @@
                 android:textSize="18dp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-    <Button
-        android:background="@color/kprogresshud_grey_color"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="15dp"
-        android:padding="10dp"
-        android:text="Hoàn thành"
-        android:onClick="them"
-        android:layout_gravity="right"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:textStyle="normal"
-        android:textSize="18dp"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="right">
+        <Button
+            android:background="@color/kprogresshud_grey_color"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:padding="10dp"
+            android:text="Xóa"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:textStyle="normal"
+            android:textSize="18dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:background="@color/kprogresshud_grey_color"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:padding="10dp"
+            android:text="Hoàn thành"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:textStyle="normal"
+            android:textSize="18dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
 
 </LinearLayout>
