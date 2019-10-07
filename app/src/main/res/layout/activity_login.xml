@@ -30,8 +30,8 @@
             android:layout_marginTop="30dp"
             android:fontFamily="sans-serif-light"
             android:textStyle="bold"
-            android:paddingRight="20dp"
-            android:text="Chào mừng đến với Nhà Vườn người bán"
+            android:paddingRight="100dp"
+            android:text="Chào mừng đến với Nhà Vườn"
             android:textColor="@color/black"
             android:textSize="30dp" />
 
@@ -60,7 +60,7 @@
                 android:layout_height="40dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/rounded_white"
-                android:drawableLeft="@drawable/ic_account_circle_black_24dp"
+                android:drawableLeft="@drawable/ic_account"
                 android:drawablePadding="5dp"
                 android:hint="Tên dăng nhập"
                 android:paddingStart="10dp"

@@ -8,7 +8,7 @@
     tools:context=".ChatActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/dsa"
+        android:id="@+id/dfg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:accessibilityPaneTitle="">
@@ -39,12 +39,13 @@
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <com.google.android.material.appbar.AppBarLayout
+    <LinearLayout
         android:id="@+id/recycleView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/asd"
-        android:layout_below="@+id/dsa"
+        android:layout_above="@+id/jkj"
+        android:layout_below="@+id/dfg"
+        android:orientation="vertical"
         android:background="@color/lightgray">
 
         <RelativeLayout
@@ -158,10 +159,10 @@
 
         </RelativeLayout>
 
-    </com.google.android.material.appbar.AppBarLayout>
+    </LinearLayout>
 
     <RelativeLayout
-        android:id="@+id/asd"
+        android:id="@+id/jkj"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

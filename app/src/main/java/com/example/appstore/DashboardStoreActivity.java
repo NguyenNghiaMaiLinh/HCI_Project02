@@ -12,7 +12,7 @@ import android.view.Window;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class DashboardStoreActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class DashboardStoreActivity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class DashboardStoreActivity extends AppCompatActivity implements Navigat
     }
 
     public void onHomeChat1(View view) {
-        Intent intent = new Intent(DashboardStoreActivity.this, HomeChatActivity.class);
+        Intent intent = new Intent(this, HomeChatActivity.class);
         startActivity(intent);
     }
 
@@ -44,17 +44,9 @@ public class DashboardStoreActivity extends AppCompatActivity implements Navigat
         Intent intent = new Intent(getApplicationContext(), BookingFinishedListActivity.class);
         startActivity(intent);
     }
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        return false;
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+    public void onLogin(View view){
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 
     public void clickToDoanhThu(View view) {
