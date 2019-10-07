@@ -7,7 +7,7 @@
     tools:context=".HomeChatActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/dsa"
+        android:id="@+id/uuu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:accessibilityPaneTitle="">
@@ -39,12 +39,10 @@
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/recycleView"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/asd"
-        android:layout_below="@+id/dsa"
+        android:layout_below="@+id/uuu"
         android:background="@color/white">
 
         <RelativeLayout
@@ -251,7 +249,7 @@
         </RelativeLayout>
 
 
-    </com.google.android.material.appbar.AppBarLayout>
+    </RelativeLayout>
 
 
 </RelativeLayout>

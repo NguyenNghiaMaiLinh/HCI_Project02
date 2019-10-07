@@ -17,13 +17,6 @@
         <activity android:name=".HomeChatActivity" />
         <activity android:name=".CreateProductActivity" android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".DashboardStoreActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".DialogActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".FormRegister" />
@@ -31,12 +24,17 @@
         <activity android:name=".BookingListActivity" />
         <activity android:name=".BookingDetailsActivity" />
         <activity android:name=".BookingFinishedListActivity" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".BookingFinishedDetailsActivity" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".DashboardStoreActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
+                <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
 
+                        <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
         </activity>
     </application>
 
