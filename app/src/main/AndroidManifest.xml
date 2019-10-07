@@ -9,15 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UpdateProductActivity"></activity>
-        <activity android:name=".LichSuGiaoDichActivity" />
-        <activity android:name=".RutTienActivity" />
-        <activity android:name=".DoanhThuActivity" />
-        <activity android:name=".ViActivity" />
+        <activity android:name=".UpdateProductActivity" android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".LichSuGiaoDichActivity" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".RutTienActivity" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".DoanhThuActivity" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ViActivity" android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".HomeChatActivity" />
-        <activity android:name=".CreateProductActivity" />
+        <activity android:name=".CreateProductActivity" android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".DashboardStoreActivity" />
+        <activity android:name=".DashboardStoreActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".DialogActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".FormRegister" />
@@ -30,11 +36,7 @@
             android:name=".LoginActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

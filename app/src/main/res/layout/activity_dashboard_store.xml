@@ -168,13 +168,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:gravity="left"
-                android:text="Đăng sản phẩm mới"
+                android:text="Thêm sản phẩm/dịch vụ mới"
                 android:textSize="20dp"
                 android:onClick="clickToCreateProduct"/>
             <ImageView
                 android:layout_width="12dp"
                 android:layout_height="12dp"
-                android:layout_marginLeft="125dp"
+                android:layout_marginLeft="50dp"
                 android:src="@drawable/next2"
                 android:onClick="clickToCreateProduct"/>
         </LinearLayout>
