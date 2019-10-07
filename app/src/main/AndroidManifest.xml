@@ -17,7 +17,7 @@
         <activity android:name=".HomeChatActivity" />
         <activity android:name=".CreateProductActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".DashboardStoreActivity" />
         <activity android:name=".DialogActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".FormRegister" />
@@ -27,7 +27,7 @@
         <activity android:name=".BookingFinishedListActivity" />
         <activity android:name=".BookingFinishedDetailsActivity" />
         <activity
-            android:name=".DashboardStoreActivity"
+            android:name=".LoginActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

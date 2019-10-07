@@ -12,7 +12,7 @@ import android.view.Window;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class DashboardStoreActivity extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener {
+public class DashboardStoreActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,16 +26,17 @@ public class DashboardStoreActivity extends AppCompatActivity  implements Naviga
     }
 
     public void clickToVi(View view) {
-            Intent intent = new Intent(getApplicationContext(), ViActivity.class);
-            startActivity(intent);
-        }
+        Intent intent = new Intent(getApplicationContext(), ViActivity.class);
+        startActivity(intent);
+    }
 
     public void clickToBookingList(View view) {
         Intent intent = new Intent(getApplicationContext(), BookingListActivity.class);
         startActivity(intent);
     }
-    public void onHomeChat(View view){
-        Intent intent = new Intent(getApplicationContext(), HomeChatActivity.class);
+
+    public void onHomeChat1(View view) {
+        Intent intent = new Intent(DashboardStoreActivity.this, HomeChatActivity.class);
         startActivity(intent);
     }
 
@@ -48,6 +49,7 @@ public class DashboardStoreActivity extends AppCompatActivity  implements Naviga
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         return false;
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

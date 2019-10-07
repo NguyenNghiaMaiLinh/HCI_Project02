@@ -47,9 +47,9 @@ public class LoginActivity extends AppCompatActivity {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    onOpenDialog();
-                    onCreateDialog();
+
                     kProgressHUD.dismiss();
+                    onCreateDialog();
 
                     // Toast.makeText(Login_Form.this, "Đăng nhập thành công", Toast.LENGTH_LONG).show();
                 }
@@ -71,8 +71,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public  void onGoogle(View view ){
-        Intent intent = new Intent(this, RegisterActivity.class);
-        startActivityForResult(intent, REGISTER_ACTIVITY);
+        onOpenDialog();
     }
     public  void onDangky(View view ){
         Intent intent = new Intent(this, FormRegister.class);
@@ -86,14 +85,14 @@ public class LoginActivity extends AppCompatActivity {
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                LoginActivity.this.startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                onCreateDialog();
                             }
                         })
                 .setNegativeButton("Từ chối",
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                LoginActivity.this.startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                onCreateDialog();
                             }
                         })
                 .show();
