@@ -17,7 +17,6 @@
         android:textSize="20dp"
         android:textStyle="bold"/>
 
-
     <RadioButton
         android:layout_marginLeft="45dp"
         android:id="@+id/radioButton"

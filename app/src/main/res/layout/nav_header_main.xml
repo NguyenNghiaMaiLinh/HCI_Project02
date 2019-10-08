@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
-        android:textStyle="bold | italic"
+        android:textStyle="bold|italic"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:text="Hai Lúa"
         android:textSize="23dp"
