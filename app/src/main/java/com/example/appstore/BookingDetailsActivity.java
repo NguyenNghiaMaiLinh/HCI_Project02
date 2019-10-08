@@ -45,5 +45,10 @@ public class BookingDetailsActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void clickToHomeFromDetailsPage(View view) {
+
+        Intent intent = new Intent(this, DashboardStoreActivity.class);
+        startActivity(intent);
+    }
 
 }

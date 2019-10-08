@@ -29,6 +29,12 @@ public class BookingRejectedDetailsActivity extends AppCompatActivity {
         });
     }
 
+    public void clickToHomeFromDetailsPage(View view) {
+
+        Intent intent = new Intent(this, DashboardStoreActivity.class);
+        startActivity(intent);
+    }
+
 
 
 }

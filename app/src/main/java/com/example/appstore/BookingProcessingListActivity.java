@@ -34,4 +34,9 @@ public class BookingProcessingListActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+    public void clickToHomeFromListPage(View view) {
+
+        Intent intent = new Intent(this, DashboardStoreActivity.class);
+        startActivity(intent);
+    }
 }
