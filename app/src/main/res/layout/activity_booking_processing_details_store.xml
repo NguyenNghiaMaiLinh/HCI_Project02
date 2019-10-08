@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BookingDetailsActivity">
+    tools:context=".BookingProcessingDetailsActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
@@ -24,7 +24,7 @@
 
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolBarBookingDetails"
+                android:id="@+id/toolBarBookingProcessingDetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_collapseMode="pin"
@@ -257,7 +257,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
-                        android:text="Đang chờ xác nhận"
+                        android:text="Đang tiến hành"
                         android:textSize="18sp"
                         android:textColor="@color/black" />
 
@@ -267,23 +267,12 @@
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="end"
                     android:orientation="horizontal">
 
-
-                    <Button
-                        android:id="@+id/btnSubmit"
-                        android:layout_width="189dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginRight="12dp"
-                        android:background="#7ebd91"
-                        android:fontFamily="sans-serif-black"
-                        android:onClick="onClickHomePage"
-                        android:text="Xác nhận lịch"
-                        android:textColor="@color/white"
-                        android:textSize="16sp"
-                        android:textStyle="normal" />
 
                     <Button
                         android:id="@+id/btnExit1"
@@ -293,7 +282,7 @@
                         android:background="@drawable/register_button"
                         android:fontFamily="sans-serif-black"
                         android:onClick="onClickCancel"
-                        android:text="Từ Chối"
+                        android:text="Huỷ đơn"
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:textStyle="normal" />

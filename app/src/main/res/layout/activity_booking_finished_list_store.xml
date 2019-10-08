@@ -24,7 +24,7 @@
 
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolBarBookingList"
+                android:id="@+id/toolBarBookingFinishedList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_collapseMode="pin"
@@ -128,7 +128,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="8dp"
-                                android:text="2019:10:01 14:15:20 "
+                                android:text="14:15 - 01/10/2019"
                                 android:textSize="12sp" />
 
                             <LinearLayout
@@ -252,7 +252,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="8dp"
-                                android:text="2019:10:01 14:15:20 "
+                                android:text="14:15 - 01/10/2019"
                                 android:textSize="12sp" />
 
                             <LinearLayout
