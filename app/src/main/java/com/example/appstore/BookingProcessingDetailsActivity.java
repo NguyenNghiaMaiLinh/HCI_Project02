@@ -41,5 +41,11 @@ public class BookingProcessingDetailsActivity extends AppCompatActivity {
                 startActivity(intent);
     }
 
+    public void onClickDone(View view) {
+
+        Intent intent = new Intent(this, BookingFinishedListActivity.class);
+        startActivity(intent);
+    }
+
 
 }
