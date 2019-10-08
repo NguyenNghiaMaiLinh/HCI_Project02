@@ -61,6 +61,7 @@
             android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
+        android:onClick="clickToLichSuBanHang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp">
@@ -78,12 +79,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:gravity="left"
-                android:text="Đơn bán"
+                android:text="Lịch sử bán hàng"
                 android:textSize="20dp" />
             <ImageView
                 android:layout_width="12dp"
                 android:layout_height="12dp"
-                android:layout_marginLeft="230dp"
+                android:layout_marginLeft="155dp"
                 android:src="@drawable/next2" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
