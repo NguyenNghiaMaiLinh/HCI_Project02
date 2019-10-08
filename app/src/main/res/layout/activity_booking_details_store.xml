@@ -36,6 +36,7 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
+                        android:onClick="clickToHomeFromDetailsPage"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:padding="10dp"

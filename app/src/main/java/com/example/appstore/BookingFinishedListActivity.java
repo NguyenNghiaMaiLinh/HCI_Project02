@@ -32,6 +32,11 @@ public class BookingFinishedListActivity extends AppCompatActivity {
     public void onClickToBookingFinishedDetails(View view) {
         Intent intent = new Intent(getApplicationContext(), BookingFinishedDetailsActivity.class);
         startActivity(intent);
+    }
 
+    public void clickToHomeFromListPage(View view) {
+
+        Intent intent = new Intent(this, DashboardStoreActivity.class);
+        startActivity(intent);
     }
 }

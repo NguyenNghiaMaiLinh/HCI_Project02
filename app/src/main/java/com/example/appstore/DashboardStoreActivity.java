@@ -62,8 +62,5 @@ public class DashboardStoreActivity extends AppCompatActivity  {
         startActivity(intent);
     }
 
-    public void clickToLichSuBanHang(View view) {
-        Intent intent = new Intent(getApplicationContext(), LichSuBanHangActivity.class);
-        startActivity(intent);
-    }
+
 }
