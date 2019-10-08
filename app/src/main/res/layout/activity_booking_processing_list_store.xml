@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BookingRejectedListActivity">
+    tools:context=".BookingProcessingListActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
@@ -24,7 +24,7 @@
 
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolBarBookingRejectedList"
+                android:id="@+id/toolBarBookingProcessingList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_collapseMode="pin"
@@ -74,7 +74,7 @@
 
 
             <LinearLayout
-                android:onClick="onClickToBookingRejectedDetails"
+                android:onClick="onClickToBookingDetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp">
@@ -140,7 +140,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:padding="5dp"
-                                    android:src="@drawable/ic_adjust_reject_24dp"
+                                    android:src="@drawable/ic_adjust_pending_24dp"
 
                                     />
 
@@ -149,7 +149,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="6dp"
-                                    android:text="Đã huỷ"
+                                    android:text="Đang tiến hành"
                                     android:textColor="@color/black" />
 
 
@@ -250,7 +250,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:padding="5dp"
-                                    android:src="@drawable/ic_adjust_reject_24dp"
+                                    android:src="@drawable/ic_adjust_pending_24dp"
 
                                     />
 
@@ -259,7 +259,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="6dp"
-                                    android:text="Đã huỷ"
+                                    android:text="Đang tiến hành"
                                     android:textColor="@color/black" />
 
 

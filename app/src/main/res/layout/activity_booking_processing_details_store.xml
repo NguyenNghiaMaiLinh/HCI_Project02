@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BookingFinishedDetailsActivity">
+    tools:context=".BookingProcessingDetailsActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
@@ -24,7 +24,7 @@
 
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolBarBookingFinishedDetails"
+                android:id="@+id/toolBarBookingProcessingDetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_collapseMode="pin"
@@ -45,7 +45,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="19dp"
-                        android:text="Vườn cây mini"
+                        android:text="Thông tin đơn hàng"
                         android:textColor="@color/white"
                         android:textSize="16dp"
                         android:textStyle="bold" />
@@ -164,6 +164,7 @@
                     android:textSize="14sp"
                     android:textColor="@color/black"
                     android:enabled="false"/>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -176,18 +177,20 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
-                <AutoCompleteTextView
-                    android:id="@+id/userBookingTime"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/rounded_white"
-                    android:drawableLeft="@drawable/ic_schedule_black_24dp"
-                    android:drawablePadding="5dp"
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:text="14:15 - 01/10/2019"
-                    android:textSize="14sp" />
+                    <AutoCompleteTextView
+                        android:id="@+id/userBookingTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/rounded_white"
+                        android:drawableLeft="@drawable/ic_schedule_black_24dp"
+                        android:drawablePadding="5dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="14:15 - 01/10/2019"
+                        android:textSize="14sp" />
+
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -204,6 +207,7 @@
                     android:layout_height="50dp"
                     android:layout_marginTop="10dp"
                     android:gravity="center_vertical">
+
 
 
                     <ImageView
@@ -226,39 +230,7 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
 
-                    <TextView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
-                        android:text="Đánh giá: "
-                        android:textSize="18sp"
-                        android:textColor="@color/black"
-                        android:textStyle="bold" />
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="5dp"
-                        android:src="@drawable/ic_star_black_24dp"
-
-                        />
-
-                    <TextView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
-                        android:textSize="18sp"
-                        android:text="4.5"
-                        android:textColor="@color/black" />
-
-
-                </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -271,49 +243,54 @@
                         android:textSize="18sp"
                         android:textColor="@color/black"
                         android:textStyle="bold" />
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:src="@drawable/ic_adjust_finished_24dp"
 
-                    />
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:textSize="18sp"
-                    android:text="Đơn đã hoàn thành"
-                    android:textColor="@color/black" />
-
-                </LinearLayout>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:paddingTop="10dp"
-                    android:paddingEnd="10dp"
-                    android:text="Nhận xét của khách hàng: "
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp">
-
-                    <EditText
-                        android:id="@+id/editTextCustomerComment"
+                    <ImageView
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:ems="10"
-                        android:gravity="start|fill_horizontal"
-                        android:inputType="textMultiLine" />
-                </LinearLayout>
-            </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_adjust_pending_24dp"
 
+                        />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Đang tiến hành"
+                        android:textSize="18sp"
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/btnExit1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/register_button"
+                        android:fontFamily="sans-serif-black"
+                        android:onClick="onClickCancel"
+                        android:text="Huỷ đơn"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
 
 
         </LinearLayout>

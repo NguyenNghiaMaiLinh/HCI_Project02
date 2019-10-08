@@ -7,13 +7,13 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class BookingFinishedListActivity extends AppCompatActivity {
+public class BookingProcessingListActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_booking_finished_list_store);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolBarBookingFinishedList);
+        setContentView(R.layout.activity_booking_processing_list_store);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolBarBookingProcessingList);
         setSupportActionBar(toolbar);
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -29,8 +29,8 @@ public class BookingFinishedListActivity extends AppCompatActivity {
     }
 
 
-    public void onClickToBookingFinishedDetails(View view) {
-        Intent intent = new Intent(getApplicationContext(), BookingFinishedDetailsActivity.class);
+    public void onClickToBookingDetails(View view) {
+        Intent intent = new Intent(getApplicationContext(), BookingProcessingDetailsActivity.class);
         startActivity(intent);
 
     }

@@ -187,7 +187,7 @@
                         android:drawablePadding="5dp"
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"
-                        android:text="2019:10:01 14:15:20 "
+                        android:text="14:15 - 01/10/2019"
                         android:textSize="14sp" />
 
 

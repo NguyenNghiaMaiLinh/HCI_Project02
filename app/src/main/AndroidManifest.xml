@@ -26,6 +26,10 @@
         <activity android:name=".BookingFinishedListActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".BookingFinishedDetailsActivity" />
+        <activity android:name=".BookingRejectedListActivity"/>
+        <activity android:name=".BookingRejectedDetailsActivity"/>
+        <activity android:name=".BookingProcessingListActivity"/>
+        <activity android:name=".BookingProcessingDetailsActivity"/>
         <activity
             android:name=".DashboardStoreActivity"
             android:label="@string/app_name"

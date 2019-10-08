@@ -44,6 +44,14 @@ public class DashboardStoreActivity extends AppCompatActivity  {
         Intent intent = new Intent(getApplicationContext(), BookingFinishedListActivity.class);
         startActivity(intent);
     }
+    public void clickToBookingRejectedList(View view) {
+        Intent intent = new Intent(getApplicationContext(), BookingRejectedListActivity.class);
+        startActivity(intent);
+    }
+    public void clickToBookingProcessingList(View view) {
+        Intent intent = new Intent(getApplicationContext(), BookingProcessingListActivity.class);
+        startActivity(intent);
+    }
     public void onLogin(View view){
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);

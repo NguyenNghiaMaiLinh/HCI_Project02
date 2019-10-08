@@ -128,7 +128,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="8dp"
-                                android:text="2019:10:01 14:15:20 "
+                                android:text="14:15 - 01/10/2019"
                                 android:textSize="12sp" />
 
                             <LinearLayout
@@ -238,7 +238,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="8dp"
-                                android:text="2019:10:01 14:20:00 "
+                                android:text="14:20 - 01/10/2019"
                                 android:textSize="12sp" />
 
                             <LinearLayout
@@ -259,7 +259,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="6dp"
-                                    android:text="Đang xử lí đơn hàng"
+                                    android:text="Đang chờ xác nhận"
                                     android:textColor="@color/black" />
 
 
