@@ -30,7 +30,7 @@ public class ChangePassword extends AppCompatActivity {
 
     public void onOkay(View view) {
         Toast.makeText(getApplicationContext(), "Mật khẩu đã được đổi", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(getApplicationContext(), HomeChatActivity.class);
+        Intent intent = new Intent(getApplicationContext(), SettingActivity.class);
         startActivity(intent);
     }
 }

@@ -11,12 +11,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class RutTienActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class TheNganHangActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rut_tien);
+        setContentView(R.layout.activity_the_ngan_hang);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolBarId18);
         setSupportActionBar(toolbar);
         if(getSupportActionBar() != null){
@@ -26,22 +26,20 @@ public class RutTienActivity extends AppCompatActivity implements AdapterView.On
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), ViActivity.class));
+                startActivity(new Intent(getApplicationContext(), SettingActivity.class));
             }
         });
 
-//        Spinner spinner = findViewById(R.id.spinner1);
-//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.nganhang, android.R.layout.simple_spinner_item);
-//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        spinner.setAdapter(adapter);
-//        spinner.setOnItemSelectedListener(this);
-
+        Spinner spinner = findViewById(R.id.spinner2);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.nganhang, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
     }
 
-
-    public void clickToDongY(View view) {
-        Toast.makeText(getApplicationContext(),"Tiền đã được chuyển",Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(getApplicationContext(), ViActivity.class);
+    public void clickToThemTheNganHang(View view) {
+        Toast.makeText(getApplicationContext(),"Thêm thành công",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), SettingActivity.class);
         startActivity(intent);
     }
 
