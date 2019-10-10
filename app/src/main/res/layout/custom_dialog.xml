@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="30dp"
-        android:text="Xin hãy chọn lí do huỷ lịch ?"
+        android:text="Xin hãy chọn lí do huỷ đơn ?"
         android:textColor="@android:color/black"
         android:textSize="20dp"
         android:textStyle="bold"/>

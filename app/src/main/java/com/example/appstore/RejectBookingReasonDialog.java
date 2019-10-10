@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.View;
 import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
 
 public class RejectBookingReasonDialog extends Dialog implements
         android.view.View.OnClickListener {
