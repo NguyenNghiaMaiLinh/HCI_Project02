@@ -165,7 +165,7 @@
                 android:layout_width="26dp"
                 android:layout_height="26dp"
                 android:src="@drawable/ic_add_box_black_24dp"
-                android:onClick="clickToCreateProduct"/>
+                android:onClick="clickToFromCreate"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -173,13 +173,13 @@
                 android:gravity="left"
                 android:text="Thêm sản phẩm/dịch vụ mới"
                 android:textSize="20dp"
-                android:onClick="clickToCreateProduct"/>
+                android:onClick="clickToFromCreate"/>
             <ImageView
                 android:layout_width="12dp"
                 android:layout_height="12dp"
                 android:layout_marginLeft="50dp"
                 android:src="@drawable/next2"
-                android:onClick="clickToCreateProduct"/>
+                android:onClick="clickToFromCreate"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

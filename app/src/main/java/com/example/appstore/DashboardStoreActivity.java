@@ -1,8 +1,11 @@
 package com.example.appstore;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,18 +16,29 @@ import android.view.Window;
 import com.google.android.material.navigation.NavigationView;
 
 public class DashboardStoreActivity extends AppCompatActivity  {
-
+    private ProgressDialog progress;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard_store);
     }
-
-    public void clickToCreateProduct(View view) {
-        Intent intent = new Intent(getApplicationContext(), CreateProductActivity.class);
-        startActivity(intent);
+    protected Dialog onCreateDialog() {
+        return new AlertDialog.Builder(this)
+                .setView(R.layout.form_create_category_dialog)
+                .show();
     }
-
+    public void clickToFromCreate(View view) {
+        onCreateDialog();
+    }
+    public void clickToCreateProduct(View view) {
+       startActivity(new Intent(getApplicationContext(), CreateProductActivity.class));
+    }
+    public void clickToCreatePhanBon(View view) {
+        startActivity(new Intent(getApplicationContext(), CreatePhanBonActivity.class));
+    }
+    public void clickToCreateDichvu(View view) {
+        startActivity(new Intent(getApplicationContext(), CreateDichVuActivity.class));
+    }
     public void clickToVi(View view) {
         Intent intent = new Intent(getApplicationContext(), ViActivity.class);
         startActivity(intent);

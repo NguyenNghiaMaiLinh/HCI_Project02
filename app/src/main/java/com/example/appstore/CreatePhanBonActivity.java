@@ -16,12 +16,8 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
-import android.widget.Toast;
 
-import java.io.IOException;
-
-public class CreateProductActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-
+public class CreatePhanBonActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     Button selectImage;
     ImageView imageView1;
     ImageView imageView2;
@@ -37,8 +33,9 @@ public class CreateProductActivity extends AppCompatActivity implements AdapterV
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_product);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolBarIdCreate1234);
+        setContentView(R.layout.activity_create_phan_bon);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolBarIdCreate11);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -52,21 +49,21 @@ public class CreateProductActivity extends AppCompatActivity implements AdapterV
         });
 
 
-        Spinner spinner = findViewById(R.id.spinnersanpham1);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.category5, android.R.layout.simple_spinner_item);
+        Spinner spinner = findViewById(R.id.spinnerphanbon1);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.category4, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
-        close1 = findViewById(R.id.close011);
+        close1 = findViewById(R.id.close11);
         close1.setVisibility(View.INVISIBLE);
-        close2 = findViewById(R.id.close012);
+        close2 = findViewById(R.id.close12);
         close2.setVisibility(View.INVISIBLE);
-        close3 = findViewById(R.id.close013);
+        close3 = findViewById(R.id.close13);
         close3.setVisibility(View.INVISIBLE);
-        selectImage = findViewById(R.id.selectImage00);
-        imageView1 = (ImageView) findViewById(R.id.imageSP011);
-        imageView2 = (ImageView) findViewById(R.id.imageSP012);
-        imageView3 = (ImageView) findViewById(R.id.imageSP013);
+        selectImage = findViewById(R.id.selectImage012);
+        imageView1 = (ImageView) findViewById(R.id.imageSP11);
+        imageView2 = (ImageView) findViewById(R.id.imageSP12);
+        imageView3 = (ImageView) findViewById(R.id.imageSP13);
         selectImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -132,7 +129,7 @@ public class CreateProductActivity extends AppCompatActivity implements AdapterV
 
     }
 
-    public void them2(View view) {
+    public void them(View view) {
         Intent intent = new Intent(getApplicationContext(), DashboardStoreActivity.class);
         startActivity(intent);
     }

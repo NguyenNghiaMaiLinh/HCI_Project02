@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CreateProductActivity">
+    tools:context=".CreateDichVuActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_layout"
@@ -26,13 +26,13 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="70dp"
                 android:paddingTop="10dp"
-                android:text="Thêm sản phẩm"
+                android:text="Thêm dịch vụ"
                 android:textColor="@color/white"
                 android:textSize="22dp"
                 android:textStyle="bold" />
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolBarIdCreate1234"
+                android:id="@+id/toolBarIdCreate12"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:theme="@style/AppTheme.NoActionBar"
@@ -65,14 +65,14 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:id="@+id/imageSP011"
+                        android:id="@+id/imageSP1"
                         android:layout_width="90dp"
                         android:layout_height="90dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/ic_image_black_24dp" />
 
                     <ImageView
-                        android:id="@+id/close011"
+                        android:id="@+id/close1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
@@ -85,14 +85,14 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:id="@+id/imageSP012"
+                        android:id="@+id/imageSP2"
                         android:layout_width="90dp"
                         android:layout_height="90dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/ic_image_black_24dp" />
 
                     <ImageView
-                        android:id="@+id/close012"
+                        android:id="@+id/close2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
@@ -105,14 +105,14 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:id="@+id/imageSP013"
+                        android:id="@+id/imageSP3"
                         android:layout_width="90dp"
                         android:layout_height="90dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/ic_image_black_24dp" />
 
                     <ImageView
-                        android:id="@+id/close013"
+                        android:id="@+id/close3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
@@ -121,10 +121,9 @@
                 </RelativeLayout>
 
                 <Button
-                    android:id="@+id/selectImage00"
+                    android:id="@+id/selectImage12"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:layout_centerVertical="true"
                     android:layout_marginHorizontal="10dp"
                     android:layout_marginTop="10dp"
                     android:text="+ Thêm Hình ảnh"
@@ -141,7 +140,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Tên phân bón" />
+                    android:hint="Tên dịch vụ" />
             </LinearLayout>
 
             <LinearLayout
@@ -155,7 +154,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLines="3"
-                    android:hint="Mô tả phân bón" />
+                    android:hint="Mô tả dịch vụ" />
             </LinearLayout>
 
         </LinearLayout>
@@ -185,7 +184,6 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="15dp"
                 android:gravity="left"
-                android:maxLength="10"
                 android:text="Giá"
                 android:textSize="18dp" />
 
@@ -195,7 +193,6 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
                 android:inputType="number"
-                android:maxLength="10"
                 android:textSize="18dp"
                 android:textStyle="normal" />
 
@@ -220,10 +217,16 @@
                     android:layout_marginLeft="20dp"
                     android:src="@drawable/category" />
 
-
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_marginLeft="16dp"-->
+                    <!--android:text="Theo đơn giá: "-->
+                    <!--android:textSize="18dp" />-->
 
                 <Spinner
-                    android:id="@+id/spinnersanpham1"
+                    android:id="@+id/spinnerDichVu1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center" />
@@ -238,7 +241,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginRight="15dp"
         android:background="@color/kprogresshud_grey_color"
-        android:onClick="them2"
+        android:onClick="them"
         android:padding="10dp"
         android:text="Hoàn thành"
         android:textSize="18dp"
