@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".StoreProduct">
+
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:paddingHorizontal="10dp">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/storeServiceItem"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="15dp">
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/catco" />
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center">
+
+                    <!--service name-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cắt cỏ"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+
+                    <!--service price-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Giá tham khảo:"
+                        android:textSize="20dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="299.000đ/m2"
+                        android:textStyle="bold"
+                        android:textSize="20dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="15dp">
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/taohinhcay" />
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center">
+
+                    <!--product name-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tạo hình cây"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="20dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Giá tham khảo:"
+                        android:textSize="20dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="400.000/cây"
+                        android:textStyle="bold"
+                        android:textSize="20dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="15dp">
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/dietsau" />
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingVertical="20dp"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center">
+
+                    <!--product name-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Diệt trừ sâu bệnh"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="20dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Giá tham khảo:"
+                        android:textSize="20dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="20.000đ/cây"
+                        android:textStyle="bold"
+                        android:textSize="20dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+    <!--</ScrollView>-->
+
+</FrameLayout>
