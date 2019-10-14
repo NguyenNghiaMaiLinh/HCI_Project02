@@ -33,7 +33,12 @@
         <item>Theo giờ</item>
         <item>Xin liên hệ</item>
     </string-array>
-
+    <string-array name="category31">
+        <item>Theo m2</item>
+        <item>Theo ngày</item>
+        <item>Theo giờ</item>
+        <item>Xin liên hệ</item>
+    </string-array>
     <string-array name="category4">
         <item>Theo đơn vị tính</item>
         <item>Theo 1 Kg</item>
@@ -45,7 +50,12 @@
         <item>Theo Chai/100ml</item>
     </string-array>
     <string-array name="category5">
-        <item>----</item>
+        <item>Đơn vị tính</item>
+        <item>Chậu</item>
+        <item>Cây</item>
+        <item>Nhánh</item>
+    </string-array>
+    <string-array name="category6">
         <item>Chậu</item>
         <item>Cây</item>
         <item>Nhánh</item>

@@ -17,7 +17,7 @@
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/storeServiceItem"
+            android:id="@+id/storeServiceItem1"
             android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="150dp"
@@ -28,6 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
+
                 android:paddingHorizontal="15dp">
 
                 <ImageView
@@ -183,6 +184,7 @@
                     android:layout_width="250dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
+
                     android:paddingVertical="20dp"
                     android:paddingHorizontal="10dp"
                     android:gravity="center">

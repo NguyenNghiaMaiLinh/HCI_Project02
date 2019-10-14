@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 public class StoreService extends Fragment implements View.OnClickListener {
     TextView editIcon;
     TextView deleteIcon;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,17 +33,19 @@ public class StoreService extends Fragment implements View.OnClickListener {
 //                startActivity(new Intent(getContext(), BookingService.class));
 //            }
 //        });
+        CardView cardView = root.findViewById(R.id.storeServiceItem1);
         editIcon = root.findViewById(R.id.editIcon);
         deleteIcon = root.findViewById(R.id.deleteIcon);
         editIcon.setOnClickListener(this);
         deleteIcon.setOnClickListener(this);
+        cardView.setOnClickListener(this);
         return root;
     }
 
     protected Dialog onCreateDialog() {
         return new AlertDialog.Builder(getContext())
                 .setIcon(R.drawable.ic_question_green_24dp)
-                .setTitle("Bạn có chắc muốn xoá sản phẩm/dịch vụ này chứ?")
+                .setTitle("Bạn có chắc muốn xoá dịch vụ này chứ?")
                 .setPositiveButton("Xác nhận",
                         new DialogInterface.OnClickListener() {
                             @Override
@@ -64,12 +67,18 @@ public class StoreService extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.editIcon:
-                startActivity(new Intent(getContext(), UpdateProductActivity.class));
+                startActivity(new Intent(getContext(), UpdateServiceActivity.class));
                 break;
 
             case R.id.deleteIcon:
                 onCreateDialog();
                 break;
+            case R.id.storeServiceItem1:
+                startActivity(new Intent(getContext(), ServicesDetailsActivity.class));
+                break;
+
         }
     }
+
+
 }

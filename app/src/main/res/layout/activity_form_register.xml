@@ -56,12 +56,24 @@
                     android:paddingEnd="10dp"
                     android:textSize="14sp">
 
-                    <EditText
-                        android:id="@+id/ten"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:hint="Tên doanh nghiệp" />
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/ten"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="Tên doanh nghiệp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_settings_black_24dp" />
+                    </LinearLayout>
+
                 </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -69,6 +81,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
+
                     <com.google.android.material.textfield.TextInputLayout
 
                         android:layout_width="150dp"
@@ -83,7 +96,7 @@
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:ems="10"
-                            android:hint="Người đại diện"/>
+                            android:hint="Người đại diện" />
                     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -93,6 +106,7 @@
                         android:layout_height="40dp"
                         android:layout_marginLeft="10dp" />
                 </LinearLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
 
                     android:layout_width="match_parent"
@@ -100,13 +114,13 @@
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/rounded_white"
                     android:paddingStart="10dp"
-                    android:paddingEnd="10dp" >
+                    android:paddingEnd="10dp">
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:text="Lô T2, Đường D1, khu CNC Quận 9"/>
+                        android:text="Lô T2, Đường D1, khu CNC Quận 9" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -116,16 +130,29 @@
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/rounded_white"
                     android:paddingStart="10dp"
-                    android:paddingEnd="10dp" >
+                    android:paddingEnd="10dp">
 
-                    <EditText
-                        android:id="@+id/dienthoai"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="phone"
-                        android:hint="Số điện thoại"/>
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/dienthoai"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="Số điện thoại"
+                            android:inputType="phone" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_settings_black_24dp" />
+                    </LinearLayout>
+
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -134,13 +161,26 @@
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp">
 
-                <EditText
-                    android:id="@+id/email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Email"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/email"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="Email" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_settings_black_24dp" />
+                    </LinearLayout>
+
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <Spinner
                     android:id="@+id/spinner2"
                     android:layout_width="match_parent"

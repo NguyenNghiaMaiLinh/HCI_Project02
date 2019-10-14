@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="70dp"
                 android:paddingTop="10dp"
-                android:text="Sửa thông tin sản phẩm"
+                android:text="Sửa thông tin dịch vụ"
                 android:textColor="@color/white"
                 android:textSize="22dp"
                 android:textStyle="bold" />
@@ -66,18 +66,18 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:id="@+id/imageSP0111"
+                        android:id="@+id/imageSP01111"
                         android:layout_width="90dp"
                         android:layout_height="90dp"
                         android:scaleType="fitXY"
-                        android:src="@drawable/terrarium_350k" />
+                        android:src="@drawable/catco" />
 
                     <ImageView
-                        android:id="@+id/close0111"
+                        android:id="@+id/close01111"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
-                        android:onClick="close1"
+                        android:onClick="close1111"
                         android:background="@drawable/circleclose"
                         android:src="@drawable/ic_close_black_24dp" />
                 </RelativeLayout>
@@ -87,18 +87,18 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:id="@+id/imageSP0121"
+                        android:id="@+id/imageSP01211"
                         android:layout_width="90dp"
                         android:layout_height="90dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/ic_image_black_24dp" />
 
                     <ImageView
-                        android:id="@+id/close0121"
+                        android:id="@+id/close01211"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
-                        android:onClick="close2"
+                        android:onClick="close1112"
                         android:background="@drawable/circleclose"
                         android:src="@drawable/ic_close_black_24dp" />
                 </RelativeLayout>
@@ -108,24 +108,24 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:id="@+id/imageSP0131"
+                        android:id="@+id/imageSP01311"
                         android:layout_width="90dp"
                         android:layout_height="90dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/ic_image_black_24dp" />
 
                     <ImageView
-                        android:id="@+id/close0131"
+                        android:id="@+id/close01311"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
-                        android:onClick="close3"
+                        android:onClick="close1113"
                         android:background="@drawable/circleclose"
                         android:src="@drawable/ic_close_black_24dp" />
                 </RelativeLayout>
 
                 <Button
-                    android:id="@+id/selectImage001"
+                    android:id="@+id/selectImage0011"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_centerVertical="true"
@@ -147,7 +147,7 @@
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/ic_mode_edit_black_24dp"
                     android:drawablePadding="10dp"
-                    android:text="Tiểu cảnh sen đá"
+                    android:text="Cắt cỏ"
                     android:hint="Tên sản phẩm/dịch vụ" />
             </LinearLayout>
 
@@ -166,10 +166,12 @@
                     />
                 <EditText
                     android:layout_width="match_parent"
+                    android:padding="5dp"
                     android:layout_height="wrap_content"
-                    android:text="- Tiểu cảnh Sen Đá sẽ giúp bạn thư thái và thoải mái, trong những lúc làm việc căng thẳng "
-
-                    android:hint="Mô tả sản phẩm/dịch vụ" />
+                    android:textColor="@color/black"
+                    android:text="- Cảnh quan sân vườn đẹp giúp cho tâm trạng chúng ta thoải mái hơn và giải tỏa những nhọc nhằn cuộc sống.
+                                                                               - Không gian sân vườn trước nhà bạn luôn xanh tươi và tràn ngập sức sống sẽ là một trong những yếu tố quan trọng điểm tô cho ngôi nhà đẹp một cách hoàn hảo."
+                    />
             </LinearLayout>
 
         </LinearLayout>
@@ -209,7 +211,7 @@
                 android:layout_marginLeft="10dp"
                 android:inputType="number"
                 android:maxLength="10"
-                android:text="250 000"
+                android:text="299 000"
                 android:textSize="18dp"
                 android:textStyle="normal" />
 
@@ -227,12 +229,12 @@
                 android:orientation="horizontal">
 
                 <!--<TextView-->
-                    <!--android:layout_gravity="center"-->
-                    <!--android:text="Đơn vị tính: "-->
-                    <!--android:layout_marginLeft="16dp"-->
-                    <!--android:textSize="18dp"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"/>-->
+                <!--android:layout_gravity="center"-->
+                <!--android:text="Đơn vị tính: "-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:textSize="18dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"/>-->
 
                 <ImageView
                     android:layout_width="24dp"
@@ -244,7 +246,7 @@
 
 
                 <Spinner
-                    android:id="@+id/spinner112"
+                    android:id="@+id/spinner1121"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center" />

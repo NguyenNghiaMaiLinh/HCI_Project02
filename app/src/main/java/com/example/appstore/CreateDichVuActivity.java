@@ -125,7 +125,18 @@ public class CreateDichVuActivity extends AppCompatActivity implements AdapterVi
 //        String text = parent.getItemAtPosition(position).toString();
 //        Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
     }
-
+    public void close112(View view) {
+        imageView2.setImageResource(R.drawable.ic_image_black_24dp);
+        close2.setVisibility(View.INVISIBLE);
+    }
+    public void close111(View view) {
+        imageView1.setImageResource(R.drawable.ic_image_black_24dp);
+        close1.setVisibility(View.INVISIBLE);
+    }
+    public void close113(View view) {
+        imageView3.setImageResource(R.drawable.ic_image_black_24dp);
+        close3.setVisibility(View.INVISIBLE);
+    }
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 

@@ -76,6 +76,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
+                        android:onClick="close111"
                         android:background="@drawable/circleclose"
                         android:src="@drawable/ic_close_black_24dp" />
                 </RelativeLayout>
@@ -96,6 +97,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
+                        android:onClick="close112"
                         android:background="@drawable/circleclose"
                         android:src="@drawable/ic_close_black_24dp" />
                 </RelativeLayout>
@@ -116,6 +118,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
+                        android:onClick="close113"
                         android:background="@drawable/circleclose"
                         android:src="@drawable/ic_close_black_24dp" />
                 </RelativeLayout>
@@ -138,9 +141,14 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="390dp"
                     android:layout_height="wrap_content"
                     android:hint="Tên dịch vụ" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_settings_black_24dp"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -151,10 +159,15 @@
                 android:orientation="horizontal">
 
                 <MultiAutoCompleteTextView
-                    android:layout_width="match_parent"
+                    android:layout_width="390dp"
                     android:layout_height="wrap_content"
                     android:maxLines="3"
                     android:hint="Mô tả dịch vụ" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_settings_black_24dp"
+                    />
             </LinearLayout>
 
         </LinearLayout>

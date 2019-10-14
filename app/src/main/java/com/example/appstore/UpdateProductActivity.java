@@ -23,19 +23,26 @@ import java.io.IOException;
 public class UpdateProductActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     Button selectImage;
+    ImageView imageView1;
+    ImageView imageView2;
+    ImageView imageView3;
+    ImageView close1;
+    ImageView close2;
+    ImageView close3;
     ImageView imageView;
     private int REQUEST_CODE = 1;
     RadioGroup radioGroup;
     RadioButton radioButton;
+    int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_product);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolBarId11);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolBarId11232);
         setSupportActionBar(toolbar);
-        if(getSupportActionBar() != null){
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
@@ -45,17 +52,21 @@ public class UpdateProductActivity extends AppCompatActivity implements AdapterV
                 startActivity(new Intent(getApplicationContext(), Store.class));
             }
         });
-        radioGroup = findViewById(R.id.groupb);
 
-        Spinner spinner = findViewById(R.id.spinner1);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.category5, android.R.layout.simple_spinner_item);
+        Spinner spinner = findViewById(R.id.spinner112);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.category6, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
-        spinner.setSelection(2);
-
-        selectImage = findViewById(R.id.selectImage);
-        imageView = (ImageView) findViewById(R.id.imageSP);
+        close1 = findViewById(R.id.close0111);
+        close2 = findViewById(R.id.close0121);
+        close2.setVisibility(View.INVISIBLE);
+        close3 = findViewById(R.id.close0131);
+        close3.setVisibility(View.INVISIBLE);
+        selectImage = findViewById(R.id.selectImage001);
+        imageView1 = (ImageView) findViewById(R.id.imageSP0111);
+        imageView2 = (ImageView) findViewById(R.id.imageSP0121);
+        imageView3 = (ImageView) findViewById(R.id.imageSP0131);
         selectImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,15 +81,44 @@ public class UpdateProductActivity extends AppCompatActivity implements AdapterV
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
-            Uri uri = data.getData();
-            try {
-                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
-                imageView.setImageBitmap(bitmap);
-
-            } catch (Exception e) {
-                e.printStackTrace();
+        if (count == 0) {
+            if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
+                Uri uri = data.getData();
+                try {
+                    count++;
+                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+                    imageView2.setImageBitmap(bitmap);
+                    close2.setVisibility(View.VISIBLE);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
+        } else if (count == 1) {
+            if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
+                Uri uri = data.getData();
+                try {
+                    count++;
+                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+                    imageView3.setImageBitmap(bitmap);
+
+                    close3.setVisibility(View.VISIBLE);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        } else if (count == 2) {
+            if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
+                Uri uri = data.getData();
+                try {
+                    count++;
+                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+                    imageView1.setImageBitmap(bitmap);
+                    close1.setVisibility(View.VISIBLE);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+//        }
         }
     }
 
@@ -93,11 +133,18 @@ public class UpdateProductActivity extends AppCompatActivity implements AdapterV
 
     }
 
-    public void rbclick(View view) {
-        int rdbtID = radioGroup.getCheckedRadioButtonId();
-        radioButton = (RadioButton)findViewById(rdbtID);
+    public void close2(View view) {
+        imageView2.setImageResource(R.drawable.ic_image_black_24dp);
+        close2.setVisibility(View.INVISIBLE);
     }
-
+    public void close1(View view) {
+        imageView1.setImageResource(R.drawable.ic_image_black_24dp);
+        close1.setVisibility(View.INVISIBLE);
+    }
+    public void close3(View view) {
+        imageView3.setImageResource(R.drawable.ic_image_black_24dp);
+        close3.setVisibility(View.INVISIBLE);
+    }
     public void clickSave(View view) {
         Intent intent = new Intent(getApplicationContext(), Store.class);
         Toast.makeText(UpdateProductActivity.this, "Thay đổi thông tin thành công !", Toast.LENGTH_LONG).show();

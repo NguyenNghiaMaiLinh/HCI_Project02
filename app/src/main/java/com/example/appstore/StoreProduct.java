@@ -39,7 +39,7 @@ public class StoreProduct extends Fragment implements View.OnClickListener {
 CardView cardView = v.findViewById(R.id.storeServiceItem);
         return new AlertDialog.Builder(getContext())
                 .setIcon(R.drawable.ic_question_green_24dp)
-                .setTitle("Bạn có chắc muốn xoá sản phẩm/dịch vụ này chứ?")
+                .setTitle("Bạn có chắc muốn xoá sản phẩm này chứ?")
                 .setPositiveButton("Xác nhận",
                         new DialogInterface.OnClickListener() {
                             @Override

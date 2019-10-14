@@ -28,7 +28,7 @@
                 android:layout_marginStart="100dp"
                 android:layout_marginTop="10dp"
                 android:padding="15dp"
-                android:text="Chọn Danh mục"
+                android:text="Chọn danh mục"
                 android:textColor="@color/black"
                 android:textSize="21dp"
                 android:textStyle="bold" />
@@ -43,7 +43,6 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="100dp"
-                    android:layout_marginStart="10dp"
                     android:layout_height="100dp"
                     android:background="@color/lightgray"
                     >
