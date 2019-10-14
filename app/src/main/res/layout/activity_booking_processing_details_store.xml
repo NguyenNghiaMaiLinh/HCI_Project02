@@ -382,12 +382,24 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
                     android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnExit1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="12dp"
+                        android:background="@drawable/register_button"
+                        android:fontFamily="sans-serif-black"
+                        android:onClick="onClickCancel"
+                        android:text="Huỷ đơn"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
                     <Button
                         android:id="@+id/btnSubmit"
                         android:layout_width="170dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginRight="12dp"
                         android:background="#7ebd91"
                         android:fontFamily="sans-serif-black"
                         android:onClick="onClickDone"
@@ -396,18 +408,7 @@
                         android:textSize="16sp"
                         android:textStyle="normal" />
 
-                    <Button
-                        android:id="@+id/btnExit1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
 
-                        android:background="@drawable/register_button"
-                        android:fontFamily="sans-serif-black"
-                        android:onClick="onClickCancel"
-                        android:text="Huỷ đơn"
-                        android:textColor="@color/white"
-                        android:textSize="16sp"
-                        android:textStyle="normal" />
 
 
                 </LinearLayout>

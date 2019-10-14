@@ -35,7 +35,7 @@ public class BookingDetailsActivity extends AppCompatActivity {
 
     public void onClickCancel(View view) {
 
-        RejectBookingReasonDialog cdd=new RejectBookingReasonDialog(BookingDetailsActivity.this);
+        CancelBookingReasonDialog cdd=new CancelBookingReasonDialog(BookingDetailsActivity.this);
         cdd.show();
     }
 
