@@ -26,12 +26,13 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="70dp"
                 android:paddingTop="10dp"
-                android:text="Sửa sản phẩm/dịch vụ"
+                android:text="Sửa thông tin sản phẩm/dịch vụ"
                 android:textColor="@color/white"
                 android:textSize="22dp"
                 android:textStyle="bold" />
 
             <androidx.appcompat.widget.Toolbar
+                app:navigationIcon="?attr/homeAsUpIndicator"
                 android:id="@+id/toolBarId11"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
@@ -41,6 +42,7 @@
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
+
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -63,7 +65,7 @@
                     android:id="@+id/imageSP"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/ic_image_black_24dp" />
+                    android:src="@drawable/terrarium_350k" />
 
                 <Button
                     android:layout_marginTop="6dp"
@@ -84,7 +86,9 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Cây kim tiền"
+                    android:drawableLeft="@drawable/ic_mode_edit_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:text="Tiểu cảnh sen đá"
                     android:hint="Tên sản phẩm/dịch vụ" />
             </LinearLayout>
 
@@ -93,14 +97,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
-                android:orientation="horizontal">
-
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mô tả:"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Cây Kim Tiền đem tài lộc và may mắn cho chủ nhân.
-Chậu cây xanh xinh tạo điểm nhấn cho góc làm việc.
-Cây xanh giúp giảm căng thẳng, hút bức xạ điện tử."
+                    android:text="- Tiểu cảnh Sen Đá sẽ giúp bạn thư thái và thoải mái, trong những lúc làm việc căng thẳng "
+
                     android:hint="Mô tả sản phẩm/dịch vụ" />
             </LinearLayout>
 
@@ -129,21 +138,18 @@ Cây xanh giúp giảm căng thẳng, hút bức xạ điện tử."
                     android:id="@+id/a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:buttonTint="#7ebd91"
                     android:text="Sản phẩm"/>
                 <RadioButton
                     android:onClick="rbclick"
                     android:id="@+id/b"
+                    android:buttonTint="#7ebd91"
                     android:layout_marginLeft="56dp"
                     android:layout_marginRight="56dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Dịch vụ"/>
-                <RadioButton
-                    android:onClick="rbclick"
-                    android:id="@+id/c"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Phân bón"/>
             </RadioGroup>
 
         </LinearLayout>
@@ -168,7 +174,7 @@ Cây xanh giúp giảm căng thẳng, hút bức xạ điện tử."
 
             <TextView
                 android:layout_gravity="center"
-                android:text="Danh mục: "
+                android:text="Đơn vị tính: "
                 android:layout_marginLeft="16dp"
                 android:textSize="18dp"
                 android:layout_width="wrap_content"
@@ -213,7 +219,7 @@ Cây xanh giúp giảm căng thẳng, hút bức xạ điện tử."
                 android:layout_width="wrap_content"
                 android:textStyle="normal"
                 android:textSize="18dp"
-                android:text="185.000"
+                android:text="250.000"
                 android:layout_marginLeft="10dp"
                 android:layout_height="wrap_content"/>
 
@@ -231,23 +237,14 @@ Cây xanh giúp giảm căng thẳng, hút bức xạ điện tử."
         android:orientation="horizontal"
         android:layout_marginTop="30dp"
         android:layout_gravity="right">
+
         <Button
             android:background="@color/kprogresshud_grey_color"
             android:layout_marginTop="30dp"
             android:layout_marginRight="15dp"
             android:padding="10dp"
-            android:text="Xóa"
-            android:layout_gravity="right"
-            android:layout_width="wrap_content"
-            android:textStyle="normal"
-            android:textSize="18dp"
-            android:layout_height="wrap_content"/>
-        <Button
-            android:background="@color/kprogresshud_grey_color"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="15dp"
-            android:padding="10dp"
-            android:text="Hoàn thành"
+            android:text="Lưu"
+            android:onClick="clickSave"
             android:layout_gravity="right"
             android:layout_width="wrap_content"
             android:textStyle="normal"

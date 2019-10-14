@@ -54,12 +54,15 @@
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:text="Dịch vụ cắt cỏ"
-                            android:textSize="15dp"/>
+                            android:textColor="@color/black"
+                            android:textSize="20dp"/>
                         <TextView
+                            android:id="@+id/editIcon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:drawableRight="@drawable/ic_mode_edit_black_24dp"/>
                         <TextView
+                            android:id="@+id/deleteIcon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:drawableLeft="@drawable/ic_delete_forever_black_24dp"/>
@@ -74,9 +77,14 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Giá cả thương lượng"
-                        android:textSize="20dp"
-                        android:textStyle="bold"/>
+                        android:text="Giá tham khảo:"
+                        android:textSize="20dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="299.000đ/m2"
+                        android:textStyle="bold"
+                        android:textSize="20dp"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -118,7 +126,8 @@
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:text="Dịch vụ tạo hình cây kiểng"
-                            android:textSize="15dp"/>
+                            android:textColor="@color/black"
+                            android:textSize="18dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -138,9 +147,14 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Giá cả thương lượng"
-                        android:textSize="20dp"
-                        android:textStyle="bold"/>
+                        android:text="Giá tham khảo:"
+                        android:textSize="20dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="299.000đ/m2"
+                        android:textStyle="bold"
+                        android:textSize="20dp"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -182,7 +196,8 @@
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:text="Dịch vụ diệt sâu, trừ bọ"
-                            android:textSize="15dp"/>
+                            android:textColor="@color/black"
+                            android:textSize="18dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -202,9 +217,14 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Giá cả thương lượng"
-                        android:textSize="20dp"
-                        android:textStyle="bold"/>
+                        android:text="Giá tham khảo:"
+                        android:textSize="20dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="299.000đ/m2"
+                        android:textStyle="bold"
+                        android:textSize="20dp"/>
                 </LinearLayout>
 
             </LinearLayout>

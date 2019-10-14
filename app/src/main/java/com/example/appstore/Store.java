@@ -1,12 +1,15 @@
 package com.example.appstore;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
@@ -53,5 +56,23 @@ public class Store extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    protected Dialog onCreateDialog() {
+        return new AlertDialog.Builder(this)
+                .setView(R.layout.form_create_category_dialog)
+                .show();
+    }
+    public void clickToFromCreate(View view) {
+        onCreateDialog();
+    }
+    public void clickToCreateProduct(View view) {
+        startActivity(new Intent(getApplicationContext(), CreateProductActivity.class));
+    }
+    public void clickToCreatePhanBon(View view) {
+        startActivity(new Intent(getApplicationContext(), CreatePhanBonActivity.class));
+    }
+    public void clickToCreateDichvu(View view) {
+        startActivity(new Intent(getApplicationContext(), CreateDichVuActivity.class));
     }
 }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ProductDescription">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:paddingVertical="10dp"
+        android:id="@+id/txtProductDescription"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:lines="10"
+        android:text="  Sen đá là loài cây ưa nắng, thường sống ở các vùng đất thiếu chất dinh dưỡng và khô nóng như sa mạc. Sen đá dễ trồng, xanh quanh năm. Lá rụng ra khỏi thân có thể nẩy chồi ở gốc làm thành cây mới.
+                        \n  Trưng bày: Sen đá không yêu cầu tốn công chăm sóc, rất phù hợp trồng trong chậu và tạo những góc xinh xắn, bắt mắt cho phòng khách, khách sạn hay văn phòng. Chỉ cần ngắm dáng cây nhỏ nhắn nhưng đầy sức sống rắn rỏi, cứng cáp, mọi mệt mỏi, muộn phiền, stress cũng dần tan biến, giúp ta có thêm niềm tin, hăng say sống và làm việc.
+                        \n  Làm quà tặng: Hoa sen đá tượng trưng cho sự bền lâu, vĩnh cửu, thích hợp để tặng cho người thân thiết với mình. Còn gì ý nghĩa hơn khi tặng một chậu sen đá để truyền đạt tâm ý cũng như mong ước về sự thân thiết, bất tử trong tình cảm.
+                        \n  Trang trí hoa cưới: Chỉ cần một cánh hoa bị héo thì đã có cánh khác mọc lên, giống như sức sống mãnh liệt và bất diệt của tình yêu, con người. Toàn thân chỉ một màu xanh lá, mang vẻ đẹp kín đáo, tinh khôi, không hề phô trương nhưng vẫn rất bắt mắt, vì vậy người ta còn dùng sen đá để làm những bó hoa cưới cầm tay cho cô dâu vô cùng độc đáo và ý nghĩa, tượng trưng cho một tình yêu vĩnh cửu.
+"
+        android:paddingHorizontal="20dp">
+
+    </TextView>
+
+</FrameLayout>

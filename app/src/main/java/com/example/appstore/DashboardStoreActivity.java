@@ -81,4 +81,9 @@ public class DashboardStoreActivity extends AppCompatActivity  {
         Intent intent = new Intent(getApplicationContext(), SettingActivity.class);
         startActivity(intent);
     }
+
+    public void clickToStore(View view) {
+        Intent intent = new Intent(getApplicationContext(), Store.class);
+        startActivity(intent);
+    }
 }

@@ -51,10 +51,12 @@
                             android:text="Tiểu cảnh sen đá"
                             android:textSize="15dp"/>
                         <TextView
+                            android:id="@+id/editIcon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:drawableRight="@drawable/ic_mode_edit_black_24dp"/>
                         <TextView
+                            android:id="@+id/deleteIcon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:drawableLeft="@drawable/ic_delete_forever_black_24dp"/>

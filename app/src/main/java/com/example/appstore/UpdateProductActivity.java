@@ -42,16 +42,17 @@ public class UpdateProductActivity extends AppCompatActivity implements AdapterV
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), DashboardStoreActivity.class));
+                startActivity(new Intent(getApplicationContext(), Store.class));
             }
         });
         radioGroup = findViewById(R.id.groupb);
 
         Spinner spinner = findViewById(R.id.spinner1);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.category, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.category5, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
+        spinner.setSelection(2);
 
         selectImage = findViewById(R.id.selectImage);
         imageView = (ImageView) findViewById(R.id.imageSP);
@@ -96,4 +97,11 @@ public class UpdateProductActivity extends AppCompatActivity implements AdapterV
         int rdbtID = radioGroup.getCheckedRadioButtonId();
         radioButton = (RadioButton)findViewById(rdbtID);
     }
+
+    public void clickSave(View view) {
+        Intent intent = new Intent(getApplicationContext(), Store.class);
+        Toast.makeText(UpdateProductActivity.this, "Thay đổi thông tin thành công !", Toast.LENGTH_LONG).show();
+        startActivity(intent);
+    }
+
 }

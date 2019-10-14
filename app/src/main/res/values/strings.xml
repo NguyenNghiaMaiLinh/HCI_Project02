@@ -45,12 +45,10 @@
         <item>Theo Chai/100ml</item>
     </string-array>
     <string-array name="category5">
-        <item>Theo đơn vị tính</item>
-        <item>Theo Chậu</item>
-        <item>Theo Bông</item>
-        <item>Theo Nhánh</item>
-        <item>Theo m2</item>
-
+        <item>----</item>
+        <item>Chậu</item>
+        <item>Cây</item>
+        <item>Nhánh</item>
     </string-array>
     <string-array name="nganhang">
         <item>Sacombank</item>
@@ -168,4 +166,15 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="categoryProductDetail">
+        <item>Theo đơn vị tính</item>
+        <item>Theo 1 Kg</item>
+        <item>Theo 1 gram</item>
+        <item>Theo Bao/50kg</item>
+        <item>Theo Túi/25kg</item>
+        <item>Theo Chai/500ml</item>
+        <item>Theo Chai/250ml</item>
+        <item>Theo Chai/100ml</item>
+    </string-array>
 </resources>
