@@ -47,6 +47,12 @@
                     android:text="Để bắt đầu, hãy điền vào bảng thông tin theo hướng dẫn."
                     android:textSize="12sp" />
 
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp" />
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -87,7 +93,7 @@
 
                     <com.google.android.material.textfield.TextInputLayout
 
-                        android:layout_width="160dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/rounded_white"
@@ -99,7 +105,7 @@
                             android:orientation="horizontal">
                             <EditText
                                 android:id="@+id/ten1"
-                                android:layout_width="130dp"
+                                android:layout_width="300dp"
                                 android:layout_height="wrap_content"
                                 android:ems="10"
                                 android:hint="Người đại diện" />
@@ -115,11 +121,6 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
 
-                    <Spinner
-                        android:id="@+id/spinner1"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginLeft="10dp" />
                 </LinearLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -208,7 +209,6 @@
                     android:layout_marginLeft="10dp" />
 
                 <Button
-
                     android:id="@+id/btnSubmit"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
