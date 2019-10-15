@@ -33,10 +33,16 @@ public class StoreProduct extends Fragment implements View.OnClickListener {
         editIcon.setOnClickListener(this);
         deleteIcon.setOnClickListener(this);
         cardView.setOnClickListener(this);
+
+        Intent intent = getActivity().getIntent();
+        if (Boolean.parseBoolean(intent.getStringExtra("isDel")) == true){
+            cardView.setVisibility(View.GONE);
+        }
         return root;
     }
+
+
     protected Dialog onCreateDialog(View v) {
-CardView cardView = v.findViewById(R.id.storeServiceItem);
         return new AlertDialog.Builder(getContext())
                 .setIcon(R.drawable.ic_question_green_24dp)
                 .setTitle("Bạn có chắc muốn xoá sản phẩm này chứ?")
@@ -44,7 +50,10 @@ CardView cardView = v.findViewById(R.id.storeServiceItem);
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                StoreProduct.this.startActivity(new Intent(getContext(), Store.class));
+
+                                Intent intent = new Intent(getContext(), Store.class);
+                                intent.putExtra("isDel", "true");
+                                startActivity(intent);
                             }
                         })
                 .setNegativeButton("Quay lại",
@@ -55,6 +64,7 @@ CardView cardView = v.findViewById(R.id.storeServiceItem);
                             }
                         })
                 .show();
+
     }
 
     @Override

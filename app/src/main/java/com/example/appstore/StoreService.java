@@ -39,6 +39,11 @@ public class StoreService extends Fragment implements View.OnClickListener {
         editIcon.setOnClickListener(this);
         deleteIcon.setOnClickListener(this);
         cardView.setOnClickListener(this);
+
+        Intent intent = getActivity().getIntent();
+        if (Boolean.parseBoolean(intent.getStringExtra("isDel")) == true){
+            cardView.setVisibility(View.GONE);
+        }
         return root;
     }
 
@@ -50,7 +55,9 @@ public class StoreService extends Fragment implements View.OnClickListener {
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                StoreService.this.startActivity(new Intent(getContext(), Store.class));
+                                Intent intent = new Intent(getContext(), Store.class);
+                                intent.putExtra("isDel", "true");
+                                startActivity(intent);
                             }
                         })
                 .setNegativeButton("Quay lại",

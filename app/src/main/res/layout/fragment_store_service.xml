@@ -52,7 +52,7 @@
                         android:orientation="horizontal">
                         <!--product name-->
                         <TextView
-                            android:layout_width="200dp"
+                            android:layout_width="170dp"
                             android:layout_height="wrap_content"
                             android:text="Dịch vụ cắt cỏ"
                             android:textColor="@color/black"
@@ -61,11 +61,13 @@
                             android:id="@+id/editIcon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
                             android:drawableRight="@drawable/ic_mode_edit_black_24dp"/>
                         <TextView
                             android:id="@+id/deleteIcon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
                             android:drawableLeft="@drawable/ic_delete_forever_black_24dp"/>
                     </LinearLayout>
                     <!--product description-->
@@ -124,7 +126,7 @@
                         android:orientation="horizontal">
                         <!--product name-->
                         <TextView
-                            android:layout_width="200dp"
+                            android:layout_width="170dp"
                             android:layout_height="wrap_content"
                             android:text="Dịch vụ tạo hình cây kiểng"
                             android:textColor="@color/black"
@@ -132,10 +134,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
                             android:drawableRight="@drawable/ic_mode_edit_black_24dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
                             android:drawableLeft="@drawable/ic_delete_forever_black_24dp"/>
                     </LinearLayout>
                     <!--product description-->
@@ -195,7 +199,7 @@
                         android:orientation="horizontal">
                         <!--product name-->
                         <TextView
-                            android:layout_width="200dp"
+                            android:layout_width="170dp"
                             android:layout_height="wrap_content"
                             android:text="Dịch vụ diệt sâu, trừ bọ"
                             android:textColor="@color/black"
@@ -203,10 +207,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
                             android:drawableRight="@drawable/ic_mode_edit_black_24dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
                             android:drawableLeft="@drawable/ic_delete_forever_black_24dp"/>
                     </LinearLayout>
                     <!--product description-->
