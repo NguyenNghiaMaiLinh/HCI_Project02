@@ -64,9 +64,9 @@ public class CreateProductActivity extends AppCompatActivity implements AdapterV
         close3 = findViewById(R.id.close013);
         close3.setVisibility(View.INVISIBLE);
         selectImage = findViewById(R.id.selectImage00);
-        imageView1 = (ImageView) findViewById(R.id.imageSP011);
-        imageView2 = (ImageView) findViewById(R.id.imageSP012);
-        imageView3 = (ImageView) findViewById(R.id.imageSP013);
+        imageView1 = (ImageView) findViewById(R.id.imageSP0011);
+        imageView2 = (ImageView) findViewById(R.id.imageSP0012);
+        imageView3 = (ImageView) findViewById(R.id.imageSP0013);
         selectImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,7 +100,6 @@ public class CreateProductActivity extends AppCompatActivity implements AdapterV
                     count++;
                     Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
                     imageView2.setImageBitmap(bitmap);
-
                     close2.setVisibility(View.VISIBLE);
                 } catch (Exception e) {
                     e.printStackTrace();

@@ -34,6 +34,7 @@
         <item>Xin liên hệ</item>
     </string-array>
     <string-array name="category31">
+        <item>-----</item>
         <item>Theo m2</item>
         <item>Theo ngày</item>
         <item>Theo giờ</item>
@@ -50,7 +51,7 @@
         <item>Theo Chai/100ml</item>
     </string-array>
     <string-array name="category5">
-        <item>Đơn vị tính</item>
+        <item>----</item>
         <item>Chậu</item>
         <item>Cây</item>
         <item>Nhánh</item>

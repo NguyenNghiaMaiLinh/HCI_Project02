@@ -69,9 +69,9 @@ public class Store extends AppCompatActivity {
     public void clickToCreateProduct(View view) {
         startActivity(new Intent(getApplicationContext(), CreateProductActivity.class));
     }
-    public void clickToCreatePhanBon(View view) {
-        startActivity(new Intent(getApplicationContext(), CreatePhanBonActivity.class));
-    }
+//    public void clickMap(View view) {
+//        startActivity(new Intent(getApplicationContext(), Map.class));
+//    }
     public void clickToCreateDichvu(View view) {
         startActivity(new Intent(getApplicationContext(), CreateDichVuActivity.class));
     }

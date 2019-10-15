@@ -221,37 +221,43 @@
                 android:text="đ"
                 android:textSize="18dp" />
 
-            <LinearLayout
-                android:id="@+id/LinearLayout01"
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="30dp"
-                android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="20dp"
-                    android:src="@drawable/category" />
-
-                <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:layout_marginLeft="16dp"-->
-                <!--android:text="Theo đơn giá: "-->
-                <!--android:textSize="18dp" />-->
-
-                <Spinner
-                    android:id="@+id/spinnerDichVu1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center" />
-            </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+    <LinearLayout
+        android:id="@+id/LinearLayout01"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/category" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:text="Theo đơn giá: "
+            android:textSize="18dp" />
+
+        <Spinner
+            android:id="@+id/spinnerDichVu1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
