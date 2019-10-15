@@ -68,10 +68,13 @@
                             android:ems="10"
                             android:hint="Tên doanh nghiệp" />
 
-                        <ImageView
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_settings_black_24dp" />
+                            android:text="*"
+                            android:textSize="20dp"
+                            android:textColor="@android:color/holo_red_light"
+                            />
                     </LinearLayout>
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -84,19 +87,31 @@
 
                     <com.google.android.material.textfield.TextInputLayout
 
-                        android:layout_width="150dp"
+                        android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/rounded_white"
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp">
-
-                        <EditText
-                            android:id="@+id/ten1"
-                            android:layout_width="150dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:hint="Người đại diện" />
+                            android:orientation="horizontal">
+                            <EditText
+                                android:id="@+id/ten1"
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:hint="Người đại diện" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="*"
+                                android:textSize="20dp"
+                                android:textColor="@android:color/holo_red_light"
+                                />
+                        </LinearLayout>
+
                     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -144,11 +159,13 @@
                             android:ems="10"
                             android:hint="Số điện thoại"
                             android:inputType="phone" />
-
-                        <ImageView
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_settings_black_24dp" />
+                            android:text="*"
+                            android:textSize="24dp"
+                            android:textColor="@android:color/holo_red_light"
+                            />
                     </LinearLayout>
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -173,10 +190,13 @@
                             android:ems="10"
                             android:hint="Email" />
 
-                        <ImageView
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_settings_black_24dp" />
+                            android:text="*"
+                            android:textSize="20dp"
+                            android:textColor="@android:color/holo_red_light"
+                            />
                     </LinearLayout>
 
                 </com.google.android.material.textfield.TextInputLayout>

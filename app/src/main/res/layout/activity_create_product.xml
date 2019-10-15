@@ -145,10 +145,12 @@
                     android:layout_width="390dp"
                     android:layout_height="wrap_content"
                     android:hint="Tên phân bón" />
-                <ImageView
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_settings_black_24dp"
+                    android:text="*"
+                    android:textSize="20dp"
+                    android:textColor="@android:color/holo_red_light"
                     />
             </LinearLayout>
 
@@ -164,10 +166,12 @@
                     android:layout_height="wrap_content"
                     android:maxLines="3"
                     android:hint="Mô tả phân bón" />
-                <ImageView
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_settings_black_24dp"
+                    android:text="*"
+                    android:textSize="20dp"
+                    android:textColor="@android:color/holo_red_light"
                     />
             </LinearLayout>
 
