@@ -61,7 +61,6 @@ TextView textView;
         spinner.setOnItemSelectedListener(this);
         close1 = findViewById(R.id.close0111);
         close2 = findViewById(R.id.close0121);
-        close2.setVisibility(View.INVISIBLE);
         close3 = findViewById(R.id.close0131);
         close3.setVisibility(View.INVISIBLE);
         selectImage = findViewById(R.id.selectImage001);
