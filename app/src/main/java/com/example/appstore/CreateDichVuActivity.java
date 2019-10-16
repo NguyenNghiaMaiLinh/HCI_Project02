@@ -18,16 +18,17 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class CreateDichVuActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    Button selectImage;
+    ImageView selectImage;
     ImageView imageView1;
     ImageView imageView2;
     ImageView imageView3;
     ImageView close1;
     ImageView close2;
     ImageView close3;
-
+TextView textView;
     private int REQUEST_CODE = 1;
     RadioGroup radioGroup;
     int count = 0;
@@ -64,8 +65,12 @@ public class CreateDichVuActivity extends AppCompatActivity implements AdapterVi
         close3.setVisibility(View.INVISIBLE);
         selectImage = findViewById(R.id.selectImage12);
         imageView1 = (ImageView) findViewById(R.id.imageSP1);
+        imageView1.setVisibility(View.INVISIBLE);
         imageView2 = (ImageView) findViewById(R.id.imageSP2);
         imageView3 = (ImageView) findViewById(R.id.imageSP3);
+        imageView2.setVisibility(View.INVISIBLE);
+        imageView3.setVisibility(View.INVISIBLE);
+        textView =findViewById(R.id.txt_quantity1);
         selectImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,6 +93,8 @@ public class CreateDichVuActivity extends AppCompatActivity implements AdapterVi
                     Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
                     imageView1.setImageBitmap(bitmap);
                     close1.setVisibility(View.VISIBLE);
+                    imageView1.setVisibility(View.VISIBLE);
+                    textView.setText("1/3");
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -99,8 +106,9 @@ public class CreateDichVuActivity extends AppCompatActivity implements AdapterVi
                     count++;
                     Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
                     imageView2.setImageBitmap(bitmap);
-
+                    textView.setText("2/3");
                     close2.setVisibility(View.VISIBLE);
+                    imageView2.setVisibility(View.VISIBLE);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -112,7 +120,9 @@ public class CreateDichVuActivity extends AppCompatActivity implements AdapterVi
                     count++;
                     Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
                     imageView3.setImageBitmap(bitmap);
+                    textView.setText("3/3");
                     close3.setVisibility(View.VISIBLE);
+                    imageView3.setVisibility(View.VISIBLE);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -125,18 +135,28 @@ public class CreateDichVuActivity extends AppCompatActivity implements AdapterVi
 //        String text = parent.getItemAtPosition(position).toString();
 //        Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
     }
+
     public void close112(View view) {
         imageView2.setImageResource(R.drawable.ic_image_black_24dp);
         close2.setVisibility(View.INVISIBLE);
+        imageView2.setVisibility(View.INVISIBLE);
+        textView.setText("1/3");
     }
+
     public void close111(View view) {
         imageView1.setImageResource(R.drawable.ic_image_black_24dp);
         close1.setVisibility(View.INVISIBLE);
+        imageView1.setVisibility(View.INVISIBLE);
+        textView.setText("0/3");
     }
+
     public void close113(View view) {
         imageView3.setImageResource(R.drawable.ic_image_black_24dp);
         close3.setVisibility(View.INVISIBLE);
+        imageView3.setVisibility(View.INVISIBLE);
+        textView.setText("2/3");
     }
+
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 

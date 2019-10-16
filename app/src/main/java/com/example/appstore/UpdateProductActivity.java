@@ -16,13 +16,14 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
 
 public class UpdateProductActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    Button selectImage;
+    ImageView selectImage;
     ImageView imageView1;
     ImageView imageView2;
     ImageView imageView3;
@@ -34,7 +35,7 @@ public class UpdateProductActivity extends AppCompatActivity implements AdapterV
     RadioGroup radioGroup;
     RadioButton radioButton;
     int count = 0;
-
+TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,9 +65,11 @@ public class UpdateProductActivity extends AppCompatActivity implements AdapterV
         close3 = findViewById(R.id.close0131);
         close3.setVisibility(View.INVISIBLE);
         selectImage = findViewById(R.id.selectImage001);
+        textView = findViewById(R.id.txt_quantity3);
         imageView1 = (ImageView) findViewById(R.id.imageSP0111);
         imageView2 = (ImageView) findViewById(R.id.imageSP0121);
         imageView3 = (ImageView) findViewById(R.id.imageSP0131);
+        imageView3.setVisibility(View.INVISIBLE);
         selectImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,7 +91,9 @@ public class UpdateProductActivity extends AppCompatActivity implements AdapterV
                     count++;
                     Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
                     imageView2.setImageBitmap(bitmap);
+                    textView.setText("2/3");
                     close2.setVisibility(View.VISIBLE);
+                    imageView2.setVisibility(View.VISIBLE);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -100,25 +105,26 @@ public class UpdateProductActivity extends AppCompatActivity implements AdapterV
                     count++;
                     Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
                     imageView3.setImageBitmap(bitmap);
-
+                    textView.setText("2/3");
                     close3.setVisibility(View.VISIBLE);
+                    imageView3.setVisibility(View.VISIBLE);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
-        } else if (count == 2) {
-            if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
-                Uri uri = data.getData();
-                try {
-                    count++;
-                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
-                    imageView1.setImageBitmap(bitmap);
-                    close1.setVisibility(View.VISIBLE);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-//        }
+//        } else if (count == 2) {
+//            if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
+//                Uri uri = data.getData();
+//                try {
+//                    count++;
+//                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+//                    imageView1.setImageBitmap(bitmap);
+//                    close1.setVisibility(View.VISIBLE);
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            }
+////        }
         }
     }
 
@@ -136,14 +142,20 @@ public class UpdateProductActivity extends AppCompatActivity implements AdapterV
     public void close2(View view) {
         imageView2.setImageResource(R.drawable.ic_image_black_24dp);
         close2.setVisibility(View.INVISIBLE);
+        imageView2.setVisibility(View.INVISIBLE);
+        textView.setText("1/3");
     }
     public void close1(View view) {
         imageView1.setImageResource(R.drawable.ic_image_black_24dp);
         close1.setVisibility(View.INVISIBLE);
+        imageView1.setVisibility(View.INVISIBLE);
+        textView.setText("0/3");
     }
     public void close3(View view) {
         imageView3.setImageResource(R.drawable.ic_image_black_24dp);
         close3.setVisibility(View.INVISIBLE);
+        imageView3.setVisibility(View.INVISIBLE);
+        textView.setText("2/3");
     }
     public void clickSave(View view) {
         Intent intent = new Intent(getApplicationContext(), Store.class);

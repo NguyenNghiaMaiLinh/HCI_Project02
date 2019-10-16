@@ -16,10 +16,11 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class UpdateServiceActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    Button selectImage;
+    ImageView selectImage;
     ImageView imageView1;
     ImageView imageView2;
     ImageView imageView3;
@@ -31,7 +32,7 @@ public class UpdateServiceActivity extends AppCompatActivity implements AdapterV
     RadioGroup radioGroup;
     RadioButton radioButton;
     int count = 0;
-
+TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +57,7 @@ public class UpdateServiceActivity extends AppCompatActivity implements AdapterV
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
         close1 = findViewById(R.id.imageSP01111);
+        textView = findViewById(R.id.txt_quantity4);
         close2 = findViewById(R.id.close01211);
         close2.setVisibility(View.INVISIBLE);
         close3 = findViewById(R.id.close01311);
@@ -64,6 +66,8 @@ public class UpdateServiceActivity extends AppCompatActivity implements AdapterV
         imageView1 = (ImageView) findViewById(R.id.imageSP01111);
         imageView2 = (ImageView) findViewById(R.id.imageSP01211);
         imageView3 = (ImageView) findViewById(R.id.imageSP01311);
+        imageView2.setVisibility(View.INVISIBLE);
+        imageView3.setVisibility(View.INVISIBLE);
         selectImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,6 +89,8 @@ public class UpdateServiceActivity extends AppCompatActivity implements AdapterV
                     count++;
                     Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
                     imageView2.setImageBitmap(bitmap);
+                    textView.setText("2/3");
+                    imageView2.setVisibility(View.VISIBLE);
                     close2.setVisibility(View.VISIBLE);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -97,24 +103,26 @@ public class UpdateServiceActivity extends AppCompatActivity implements AdapterV
                     count++;
                     Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
                     imageView3.setImageBitmap(bitmap);
-
+                    textView.setText("3/3");
+                    imageView3.setVisibility(View.VISIBLE);
                     close3.setVisibility(View.VISIBLE);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
-        } else if (count == 2) {
-            if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
-                Uri uri = data.getData();
-                try {
-                    count++;
-                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
-                    imageView1.setImageBitmap(bitmap);
-                    close1.setVisibility(View.VISIBLE);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
+//        } else if (count == 2) {
+//            if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
+//                Uri uri = data.getData();
+//                try {
+//                    count++;
+//                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+//                    imageView1.setImageBitmap(bitmap);
+//                    close1.setVisibility(View.VISIBLE);
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
         }
     }
 
@@ -133,14 +141,20 @@ public class UpdateServiceActivity extends AppCompatActivity implements AdapterV
     public void close1112(View view) {
         imageView2.setImageResource(R.drawable.ic_image_black_24dp);
         close2.setVisibility(View.INVISIBLE);
+        textView.setText("1/3");
+        imageView2.setVisibility(View.VISIBLE);
     }
     public void close1111(View view) {
         imageView1.setImageResource(R.drawable.ic_image_black_24dp);
         close1.setVisibility(View.INVISIBLE);
+        textView.setText("0/3");
+        imageView1.setVisibility(View.VISIBLE);
     }
     public void close1113(View view) {
         imageView3.setImageResource(R.drawable.ic_image_black_24dp);
         close3.setVisibility(View.INVISIBLE);
+        textView.setText("2/3");
+        imageView3.setVisibility(View.VISIBLE);
     }
     public void clickSave(View view) {
         Intent intent = new Intent(getApplicationContext(), Store.class);
