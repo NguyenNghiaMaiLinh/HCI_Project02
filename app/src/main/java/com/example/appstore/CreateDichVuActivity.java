@@ -1,9 +1,15 @@
 package com.example.appstore;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.Manifest;
+import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -19,6 +25,7 @@ import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class CreateDichVuActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     ImageView selectImage;
@@ -28,10 +35,15 @@ public class CreateDichVuActivity extends AppCompatActivity implements AdapterVi
     ImageView close1;
     ImageView close2;
     ImageView close3;
-TextView textView;
+    TextView textView;
+    private static final int CAMERA_REQUEST = 1888;
+    private static final int MY_CAMERA_PERMISSION_CODE = 100;
     private int REQUEST_CODE = 1;
     RadioGroup radioGroup;
     int count = 0;
+    boolean image1 = true;
+    boolean image2 = true;
+    boolean image3 = true;
     RadioButton radioButton;
 
     @Override
@@ -70,22 +82,52 @@ TextView textView;
         imageView3 = (ImageView) findViewById(R.id.imageSP3);
         imageView2.setVisibility(View.INVISIBLE);
         imageView3.setVisibility(View.INVISIBLE);
-        textView =findViewById(R.id.txt_quantity1);
-        selectImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setType("image/*");
-                intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(Intent.createChooser(intent, "Select Picture"), REQUEST_CODE);
+        textView = findViewById(R.id.txt_quantity1);
+
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == MY_CAMERA_PERMISSION_CODE) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "camera permission granted", Toast.LENGTH_LONG).show();
+                Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(cameraIntent, CAMERA_REQUEST);
+            } else {
+                Toast.makeText(this, "camera permission denied", Toast.LENGTH_LONG).show();
             }
-        });
+        }
+    }
+
+    protected Dialog onCreateDialog() {
+        return new AlertDialog.Builder(this)
+                .setView(R.layout.method_camera_dialog)
+                .show();
+    }
+
+    public void openMethodCamera2(View view) {
+        onCreateDialog();
+    }
+
+    public void onThuvien(View view) {
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), REQUEST_CODE);
+    }
+    public void onCamera(View view) {
+        if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(new String[]{Manifest.permission.CAMERA}, MY_CAMERA_PERMISSION_CODE);
+        } else {
+            Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(cameraIntent, CAMERA_REQUEST);
+        }
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (count == 0) {
+        if (image1) {
             if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
                 Uri uri = data.getData();
                 try {
@@ -95,11 +137,19 @@ TextView textView;
                     close1.setVisibility(View.VISIBLE);
                     imageView1.setVisibility(View.VISIBLE);
                     textView.setText("1/3");
+                    image1 = false;
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+            } else if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
+                Bitmap photo = (Bitmap) data.getExtras().get("data");
+                imageView1.setImageBitmap(photo);
+                textView.setText("1/3");
+                close1.setVisibility(View.VISIBLE);
+                imageView1.setVisibility(View.VISIBLE);
+                image1 = false;
             }
-        } else if (count == 1) {
+        } else if (image2) {
             if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
                 Uri uri = data.getData();
                 try {
@@ -109,11 +159,19 @@ TextView textView;
                     textView.setText("2/3");
                     close2.setVisibility(View.VISIBLE);
                     imageView2.setVisibility(View.VISIBLE);
+                    image2 = false;
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+            } else if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
+                Bitmap photo = (Bitmap) data.getExtras().get("data");
+                imageView2.setImageBitmap(photo);
+                textView.setText("2/3");
+                close2.setVisibility(View.VISIBLE);
+                imageView2.setVisibility(View.VISIBLE);
+                image2 = false;
             }
-        } else if (count == 2) {
+        } else if (image3) {
             if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
                 Uri uri = data.getData();
                 try {
@@ -123,9 +181,17 @@ TextView textView;
                     textView.setText("3/3");
                     close3.setVisibility(View.VISIBLE);
                     imageView3.setVisibility(View.VISIBLE);
+                    image3 = false;
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+            } else if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
+                Bitmap photo = (Bitmap) data.getExtras().get("data");
+                imageView3.setImageBitmap(photo);
+                textView.setText("3/3");
+                close3.setVisibility(View.VISIBLE);
+                imageView3.setVisibility(View.VISIBLE);
+                image3 = false;
             }
         }
     }
@@ -141,6 +207,7 @@ TextView textView;
         close2.setVisibility(View.INVISIBLE);
         imageView2.setVisibility(View.INVISIBLE);
         textView.setText("1/3");
+        image2 = true;
     }
 
     public void close111(View view) {
@@ -148,6 +215,7 @@ TextView textView;
         close1.setVisibility(View.INVISIBLE);
         imageView1.setVisibility(View.INVISIBLE);
         textView.setText("0/3");
+        image1 = true;
     }
 
     public void close113(View view) {
@@ -155,6 +223,7 @@ TextView textView;
         close3.setVisibility(View.INVISIBLE);
         imageView3.setVisibility(View.INVISIBLE);
         textView.setText("2/3");
+        image3 = true;
     }
 
     @Override

@@ -1,9 +1,15 @@
 package com.example.appstore;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.Manifest;
+import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -23,6 +29,8 @@ import java.io.IOException;
 
 public class UpdateProductActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
+    private static final int CAMERA_REQUEST = 1888;
+    private static final int MY_CAMERA_PERMISSION_CODE = 100;
     ImageView selectImage;
     ImageView imageView1;
     ImageView imageView2;
@@ -31,14 +39,17 @@ public class UpdateProductActivity extends AppCompatActivity implements AdapterV
     ImageView close2;
     ImageView close3;
     ImageView imageView;
+    ImageView camera;
+    ImageView thuvien;
     private int REQUEST_CODE = 1;
     RadioGroup radioGroup;
     RadioButton radioButton;
     boolean image1 = false;
-    boolean image2= false;
-    boolean image3= true;
+    boolean image2 = false;
+    boolean image3 = true;
     int count = 0;
-TextView textView;
+    TextView textView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,7 +67,8 @@ TextView textView;
                 startActivity(new Intent(getApplicationContext(), Store.class));
             }
         });
-
+        camera = findViewById(R.id.camera);
+        thuvien = findViewById(R.id.thuvien);
         Spinner spinner = findViewById(R.id.spinner112);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.category6, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -72,21 +84,72 @@ TextView textView;
         imageView2 = (ImageView) findViewById(R.id.imageSP0121);
         imageView3 = (ImageView) findViewById(R.id.imageSP0131);
         imageView3.setVisibility(View.INVISIBLE);
-        selectImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setType("image/*");
-                intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(Intent.createChooser(intent, "Select Picture"), REQUEST_CODE);
+//        camera.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+//                    requestPermissions(new String[]{Manifest.permission.CAMERA}, MY_CAMERA_PERMISSION_CODE);
+//                } else {
+//                    Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+//                    startActivityForResult(cameraIntent, CAMERA_REQUEST);
+//                }
+//            }
+//        });
+//        thuvien.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent();
+//                intent.setType("image/*");
+//                intent.setAction(Intent.ACTION_GET_CONTENT);
+//                startActivityForResult(Intent.createChooser(intent, "Select Picture"), REQUEST_CODE);
+//            }
+//        });
+    }
+
+    protected Dialog onCreateDialog() {
+        return new AlertDialog.Builder(this)
+                .setView(R.layout.method_camera_dialog)
+                .show();
+    }
+
+    public void openMethodCamera(View view) {
+        onCreateDialog();
+    }
+
+    public void onThuvien(View view) {
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), REQUEST_CODE);
+    }
+
+    public void onCamera(View view) {
+        if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(new String[]{Manifest.permission.CAMERA}, MY_CAMERA_PERMISSION_CODE);
+        } else {
+            Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(cameraIntent, CAMERA_REQUEST);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == MY_CAMERA_PERMISSION_CODE) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "camera permission granted", Toast.LENGTH_LONG).show();
+                Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(cameraIntent, CAMERA_REQUEST);
+            } else {
+                Toast.makeText(this, "camera permission denied", Toast.LENGTH_LONG).show();
             }
-        });
+        }
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if( image1){
+        if (image1) {
             if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
                 Uri uri = data.getData();
                 try {
@@ -100,8 +163,15 @@ TextView textView;
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+            } else if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
+                Bitmap photo = (Bitmap) data.getExtras().get("data");
+                imageView1.setImageBitmap(photo);
+                textView.setText("1/3");
+                close1.setVisibility(View.VISIBLE);
+                imageView1.setVisibility(View.VISIBLE);
+                image1 = false;
             }
-        }else if(image2){
+        } else if (image2) {
             if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
                 Uri uri = data.getData();
                 try {
@@ -111,12 +181,19 @@ TextView textView;
                     textView.setText("2/3");
                     close2.setVisibility(View.VISIBLE);
                     imageView2.setVisibility(View.VISIBLE);
-                    image2 =false;
+                    image2 = false;
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+            } else if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
+                Bitmap photo = (Bitmap) data.getExtras().get("data");
+                imageView2.setImageBitmap(photo);
+                textView.setText("2/3");
+                close2.setVisibility(View.VISIBLE);
+                imageView2.setVisibility(View.VISIBLE);
+                image2 = false;
             }
-        }else if(image3){
+        } else if (image3) {
             if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
                 Uri uri = data.getData();
                 try {
@@ -126,10 +203,17 @@ TextView textView;
                     textView.setText("2/3");
                     close3.setVisibility(View.VISIBLE);
                     imageView3.setVisibility(View.VISIBLE);
-                    image3 =false;
+                    image3 = false;
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+            } else if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
+                Bitmap photo = (Bitmap) data.getExtras().get("data");
+                imageView3.setImageBitmap(photo);
+                textView.setText("2/3");
+                close3.setVisibility(View.VISIBLE);
+                imageView3.setVisibility(View.VISIBLE);
+                image3 = false;
             }
         }
 
@@ -174,7 +258,6 @@ TextView textView;
 //                }
 //            }
 ////        }
-
     }
 
     @Override
@@ -193,22 +276,25 @@ TextView textView;
         close2.setVisibility(View.INVISIBLE);
         imageView2.setVisibility(View.INVISIBLE);
         textView.setText("1/3");
-        image2= true;
+        image2 = true;
     }
+
     public void close1(View view) {
         imageView1.setImageResource(R.drawable.ic_image_black_24dp);
         close1.setVisibility(View.INVISIBLE);
         imageView1.setVisibility(View.INVISIBLE);
         textView.setText("0/3");
-        image1= true;
+        image1 = true;
     }
+
     public void close3(View view) {
         imageView3.setImageResource(R.drawable.ic_image_black_24dp);
         close3.setVisibility(View.INVISIBLE);
         imageView3.setVisibility(View.INVISIBLE);
         textView.setText("2/3");
-        image3= true;
+        image3 = true;
     }
+
     public void clickSave(View view) {
         Intent intent = new Intent(getApplicationContext(), Store.class);
         Toast.makeText(UpdateProductActivity.this, "Thay đổi thông tin thành công !", Toast.LENGTH_LONG).show();

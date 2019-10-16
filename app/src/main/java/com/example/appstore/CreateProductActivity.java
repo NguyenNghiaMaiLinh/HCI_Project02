@@ -1,9 +1,15 @@
 package com.example.appstore;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.Manifest;
+import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -22,7 +28,8 @@ import android.widget.Toast;
 import java.io.IOException;
 
 public class CreateProductActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-
+    private static final int CAMERA_REQUEST = 1888;
+    private static final int MY_CAMERA_PERMISSION_CODE = 100;
     ImageView selectImage;
     ImageView imageView1;
     ImageView imageView2;
@@ -31,7 +38,9 @@ public class CreateProductActivity extends AppCompatActivity implements AdapterV
     ImageView close2;
     ImageView close3;
     TextView textView;
-
+    boolean image1 = true;
+    boolean image2 = true;
+    boolean image3 = true;
     private int REQUEST_CODE = 1;
     RadioGroup radioGroup;
     int count = 0;
@@ -74,21 +83,59 @@ public class CreateProductActivity extends AppCompatActivity implements AdapterV
         imageView1.setVisibility(View.INVISIBLE);
         imageView2.setVisibility(View.INVISIBLE);
         imageView3.setVisibility(View.INVISIBLE);
-        selectImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setType("image/*");
-                intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(Intent.createChooser(intent, "Select Picture"), REQUEST_CODE);
+//        selectImage.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent();
+//                intent.setType("image/*");
+//                intent.setAction(Intent.ACTION_GET_CONTENT);
+//                startActivityForResult(Intent.createChooser(intent, "Select Picture"), REQUEST_CODE);
+//            }
+//        });
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == MY_CAMERA_PERMISSION_CODE) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "camera permission granted", Toast.LENGTH_LONG).show();
+                Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(cameraIntent, CAMERA_REQUEST);
+            } else {
+                Toast.makeText(this, "camera permission denied", Toast.LENGTH_LONG).show();
             }
-        });
+        }
+    }
+
+    protected Dialog onCreateDialog() {
+        return new AlertDialog.Builder(this)
+                .setView(R.layout.method_camera_dialog)
+                .show();
+    }
+
+    public void openMethodCamera(View view) {
+        onCreateDialog();
+    }
+
+    public void onThuvien(View view) {
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), REQUEST_CODE);
+    }
+    public void onCamera(View view) {
+        if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(new String[]{Manifest.permission.CAMERA}, MY_CAMERA_PERMISSION_CODE);
+        } else {
+            Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(cameraIntent, CAMERA_REQUEST);
+        }
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (count == 0) {
+        if (image1) {
             if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
                 Uri uri = data.getData();
                 try {
@@ -98,11 +145,19 @@ public class CreateProductActivity extends AppCompatActivity implements AdapterV
                     textView.setText("1/3");
                     imageView1.setVisibility(View.VISIBLE);
                     close1.setVisibility(View.VISIBLE);
+                    image1 = false;
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+            } else if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
+                Bitmap photo = (Bitmap) data.getExtras().get("data");
+                imageView1.setImageBitmap(photo);
+                textView.setText("1/3");
+                close1.setVisibility(View.VISIBLE);
+                imageView1.setVisibility(View.VISIBLE);
+                image1 = false;
             }
-        } else if (count == 1) {
+        } else if (image2) {
             if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
                 Uri uri = data.getData();
                 try {
@@ -112,11 +167,19 @@ public class CreateProductActivity extends AppCompatActivity implements AdapterV
                     close2.setVisibility(View.VISIBLE);
                     textView.setText("2/3");
                     imageView2.setVisibility(View.VISIBLE);
+                    image2 = false;
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+            } else if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
+                Bitmap photo = (Bitmap) data.getExtras().get("data");
+                imageView2.setImageBitmap(photo);
+                close2.setVisibility(View.VISIBLE);
+                textView.setText("2/3");
+                imageView2.setVisibility(View.VISIBLE);
+                image2 = false;
             }
-        } else if (count == 2) {
+        } else if (image3) {
             if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
                 Uri uri = data.getData();
                 try {
@@ -126,9 +189,17 @@ public class CreateProductActivity extends AppCompatActivity implements AdapterV
                     textView.setText("3/3");
                     imageView3.setVisibility(View.VISIBLE);
                     close3.setVisibility(View.VISIBLE);
+                    image3 = false;
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+            } else if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
+                Bitmap photo = (Bitmap) data.getExtras().get("data");
+                imageView3.setImageBitmap(photo);
+                textView.setText("3/3");
+                imageView3.setVisibility(View.VISIBLE);
+                close3.setVisibility(View.VISIBLE);
+                image3 = false;
             }
         }
     }
@@ -144,6 +215,7 @@ public class CreateProductActivity extends AppCompatActivity implements AdapterV
         close2.setVisibility(View.INVISIBLE);
         textView.setText("1/3");
         imageView2.setVisibility(View.INVISIBLE);
+        image2 = true;
     }
 
     public void close11(View view) {
@@ -151,6 +223,7 @@ public class CreateProductActivity extends AppCompatActivity implements AdapterV
         close1.setVisibility(View.INVISIBLE);
         textView.setText("0/3");
         imageView1.setVisibility(View.INVISIBLE);
+        image1 = true;
     }
 
     public void close13(View view) {
@@ -158,6 +231,7 @@ public class CreateProductActivity extends AppCompatActivity implements AdapterV
         close3.setVisibility(View.INVISIBLE);
         textView.setText("2/3");
         imageView3.setVisibility(View.INVISIBLE);
+        image3 = true;
     }
 
     @Override

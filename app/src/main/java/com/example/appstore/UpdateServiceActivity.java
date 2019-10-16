@@ -1,9 +1,15 @@
 package com.example.appstore;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.Manifest;
+import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -36,6 +42,9 @@ public class UpdateServiceActivity extends AppCompatActivity implements AdapterV
     boolean image3 = true;
     int count = 0;
     TextView textView;
+
+    private static final int CAMERA_REQUEST = 1888;
+    private static final int MY_CAMERA_PERMISSION_CODE = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,15 +81,56 @@ public class UpdateServiceActivity extends AppCompatActivity implements AdapterV
         imageView3 = (ImageView) findViewById(R.id.imageSP01311);
         imageView2.setVisibility(View.INVISIBLE);
         imageView3.setVisibility(View.INVISIBLE);
-        selectImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setType("image/*");
-                intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(Intent.createChooser(intent, "Select Picture"), REQUEST_CODE);
+//        selectImage.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent();
+//                intent.setType("image/*");
+//                intent.setAction(Intent.ACTION_GET_CONTENT);
+//                startActivityForResult(Intent.createChooser(intent, "Select Picture"), REQUEST_CODE);
+//            }
+//        });
+    }
+
+    protected Dialog onCreateDialog() {
+        return new AlertDialog.Builder(this)
+                .setView(R.layout.method_camera_dialog)
+                .show();
+    }
+
+    public void openMethodCamera1(View view) {
+        onCreateDialog();
+
+    }
+
+    public void onThuvien(View view) {
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), REQUEST_CODE);
+    }
+
+    public void onCamera(View view) {
+        if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(new String[]{Manifest.permission.CAMERA}, MY_CAMERA_PERMISSION_CODE);
+        } else {
+            Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(cameraIntent, CAMERA_REQUEST);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == MY_CAMERA_PERMISSION_CODE) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "camera permission granted", Toast.LENGTH_LONG).show();
+                Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(cameraIntent, CAMERA_REQUEST);
+            } else {
+                Toast.makeText(this, "camera permission denied", Toast.LENGTH_LONG).show();
             }
-        });
+        }
     }
 
     @Override
@@ -97,9 +147,17 @@ public class UpdateServiceActivity extends AppCompatActivity implements AdapterV
                     imageView1.setVisibility(View.VISIBLE);
                     close1.setVisibility(View.VISIBLE);
                     image1 = false;
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+            } else if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
+                Bitmap photo = (Bitmap) data.getExtras().get("data");
+                imageView1.setImageBitmap(photo);
+                textView.setText("1/3");
+                close1.setVisibility(View.VISIBLE);
+                imageView1.setVisibility(View.VISIBLE);
+                image1 = false;
             }
         } else if (image2) {
             if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
@@ -115,6 +173,13 @@ public class UpdateServiceActivity extends AppCompatActivity implements AdapterV
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+            } else if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
+                Bitmap photo = (Bitmap) data.getExtras().get("data");
+                imageView2.setImageBitmap(photo);
+                textView.setText("2/3");
+                imageView2.setVisibility(View.VISIBLE);
+                close2.setVisibility(View.VISIBLE);
+                image2 = false;
             }
         } else if (image3) {
             if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
@@ -130,6 +195,13 @@ public class UpdateServiceActivity extends AppCompatActivity implements AdapterV
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+            } else if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
+                Bitmap photo = (Bitmap) data.getExtras().get("data");
+                imageView3.setImageBitmap(photo);
+                textView.setText("3/3");
+                imageView3.setVisibility(View.VISIBLE);
+                close3.setVisibility(View.VISIBLE);
+                image3 = true;
             }
         }
 //        if (count == 0) {
@@ -174,6 +246,7 @@ public class UpdateServiceActivity extends AppCompatActivity implements AdapterV
 //            }
 //        }
         // }
+
     }
 
 
