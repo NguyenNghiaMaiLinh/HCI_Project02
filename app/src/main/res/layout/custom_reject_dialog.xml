@@ -82,7 +82,18 @@
         android:paddingEnd="10dp"
         android:text="Nhận xét thêm"
         android:textSize="14sp" />
-
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:text="* Đơn hàng này sẽ bị huỷ sau khi bạn xác nhận. Thao tác này không thể thực hiện lại. Bạn có muốn tiếp tục thao tác không ? "
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="wrap_content"
