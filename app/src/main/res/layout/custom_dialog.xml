@@ -20,6 +20,7 @@
 
     <RadioButton
         android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:id="@+id/radioButton"
         android:buttonTint="#7ebd91"
         android:layout_width="wrap_content"
@@ -28,6 +29,7 @@
 
     <RadioButton
         android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:buttonTint="#7ebd91"
         android:id="@+id/radioButton02"
         android:layout_width="wrap_content"
@@ -36,6 +38,7 @@
 
     <RadioButton
         android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:id="@+id/radioButton03"
         android:layout_width="wrap_content"
         android:buttonTint="#7ebd91"
@@ -43,6 +46,7 @@
         android:text="Không thể liên hệ với khách hàng" />
     <TextView
         android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
@@ -56,6 +60,7 @@
 
     <EditText
         android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:id="@+id/userAddress"
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -69,6 +74,7 @@
 
     <TextView
         android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
