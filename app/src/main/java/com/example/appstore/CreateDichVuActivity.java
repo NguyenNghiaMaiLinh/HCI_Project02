@@ -231,7 +231,8 @@ public class CreateDichVuActivity extends AppCompatActivity implements AdapterVi
 
     }
 
-    public void them1(View view) {
+    public void them21(View view) {
+        Toast.makeText(this,"Dịch vụ đã được tạo, Chờ hệ thống xác nhận",Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getApplicationContext(), DashboardStoreActivity.class);
         startActivity(intent);
     }

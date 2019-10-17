@@ -281,7 +281,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginRight="15dp"
         android:background="@color/kprogresshud_grey_color"
-        android:onClick="them"
+        android:onClick="them21"
         android:padding="10dp"
         android:text="Hoàn thành"
         android:textSize="18dp"

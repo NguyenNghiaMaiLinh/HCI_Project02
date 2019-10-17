@@ -244,6 +244,7 @@ public class CreateProductActivity extends AppCompatActivity implements AdapterV
     }
 
     public void them2(View view) {
+        Toast.makeText(this,"Sản phẩm đã được tạo, Chờ hệ thống xác nhận",Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getApplicationContext(), DashboardStoreActivity.class);
         startActivity(intent);
     }
