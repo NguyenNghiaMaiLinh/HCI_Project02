@@ -74,7 +74,9 @@
 
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:paddingTop="10dp"
+            android:paddingLeft="-10dp"
+            android:paddingBottom="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -289,7 +291,7 @@
 
                     <TextView
 
-                        android:layout_width="228dp"
+                        android:layout_width="258dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
                         android:text="Tạm tính: "
@@ -300,7 +302,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
                         android:layout_marginTop="6dp"
-                        android:text="1.197.000đ"
+                        android:text="1.197.000 đ"
                         android:textSize="18sp" />
                 </LinearLayout>
 
@@ -312,7 +314,7 @@
 
                     <TextView
 
-                        android:layout_width="299dp"
+                        android:layout_width="329dp"
                         android:layout_height="30dp"
                         android:layout_marginTop="6dp"
                         android:text="Phí vận chuyển: "
@@ -323,7 +325,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
                         android:layout_marginTop="6dp"
-                        android:text="0đ"
+                        android:text="0 đ"
                         android:textSize="18sp" />
                 </LinearLayout>
                 <LinearLayout
@@ -334,7 +336,7 @@
 
                     <TextView
 
-                        android:layout_width="299dp"
+                        android:layout_width="329dp"
                         android:layout_height="30dp"
                         android:layout_marginTop="6dp"
                         android:text="Trợ giá: "
@@ -345,7 +347,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
                         android:layout_marginTop="6dp"
-                        android:text="0đ"
+                        android:text="0 đ"
                         android:textSize="18sp" />
                 </LinearLayout>
                 <LinearLayout
@@ -356,7 +358,7 @@
 
                     <TextView
 
-                        android:layout_width="228dp"
+                        android:layout_width="258dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
                         android:text="Thành tiền: "
@@ -368,18 +370,17 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
                         android:layout_marginTop="6dp"
-                        android:text="1.197.000đ"
+                        android:text="1.197.000 đ"
                         android:textColor="#FF0000"
                         android:textSize="18sp" />
                 </LinearLayout>
 
 
-
                 <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:layout_marginRight="50dp"
+                    android:layout_width="349dp"
+                    android:layout_height="30dp"
                     android:layout_marginTop="20dp"
+                    android:layout_marginRight="50dp"
                     android:layout_marginBottom="20dp"
                     android:orientation="horizontal">
 
@@ -388,7 +389,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="24dp"
-                        android:layout_marginRight="12dp"
+                        android:layout_marginRight="34dp"
                         android:background="@drawable/register_button"
                         android:fontFamily="sans-serif-black"
                         android:onClick="onClickCancel"
@@ -396,6 +397,7 @@
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:textStyle="normal" />
+
                     <Button
                         android:id="@+id/btnSubmit"
                         android:layout_width="170dp"
@@ -407,8 +409,6 @@
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:textStyle="normal" />
-
-
 
 
                 </LinearLayout>

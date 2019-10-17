@@ -72,7 +72,9 @@
 
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:paddingTop="10dp"
+            android:paddingLeft="-10dp"
+            android:paddingBottom="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -287,7 +289,7 @@
 
                     <TextView
 
-                        android:layout_width="228dp"
+                        android:layout_width="258dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
                         android:text="Tạm tính: "
@@ -298,7 +300,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
                         android:layout_marginTop="6dp"
-                        android:text="1.197.000đ"
+                        android:text="1.197.000 đ"
                         android:textSize="18sp" />
                 </LinearLayout>
 
@@ -310,7 +312,7 @@
 
                     <TextView
 
-                        android:layout_width="299dp"
+                        android:layout_width="329dp"
                         android:layout_height="30dp"
                         android:layout_marginTop="6dp"
                         android:text="Phí vận chuyển: "
@@ -321,7 +323,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
                         android:layout_marginTop="6dp"
-                        android:text="0đ"
+                        android:text="0 đ"
                         android:textSize="18sp" />
                 </LinearLayout>
                 <LinearLayout
@@ -332,7 +334,7 @@
 
                     <TextView
 
-                        android:layout_width="299dp"
+                        android:layout_width="329dp"
                         android:layout_height="30dp"
                         android:layout_marginTop="6dp"
                         android:text="Trợ giá: "
@@ -343,7 +345,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
                         android:layout_marginTop="6dp"
-                        android:text="0đ"
+                        android:text="0 đ"
                         android:textSize="18sp" />
                 </LinearLayout>
                 <LinearLayout
@@ -354,7 +356,7 @@
 
                     <TextView
 
-                        android:layout_width="228dp"
+                        android:layout_width="258dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
                         android:text="Thành tiền: "
@@ -366,7 +368,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
                         android:layout_marginTop="6dp"
-                        android:text="1.197.000đ"
+                        android:text="1.197.000 đ"
                         android:textColor="#FF0000"
                         android:textSize="18sp" />
                 </LinearLayout>
