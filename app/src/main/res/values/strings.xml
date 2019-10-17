@@ -26,8 +26,17 @@
         <item>Tỉa cành</item>
         <item>Trồng cây</item>
     </string-array>
+    <string-array name="category41">
+        <item>Tiểu cảnh</item>
+        <item>Đại cảnh</item>
+        <item>Họ cây leo</item>
+        <item>Cây ăn quả</item>
+        <item>Cây thuốc</item>
+        <item>Sống trong nước</item>
+        <item>Rau</item>
+    </string-array>
     <string-array name="category3">
-        <item>Theo Đơn giá</item>
+        <item>-----</item>
         <item>Theo m2</item>
         <item>Theo ngày</item>
         <item>Theo giờ</item>
@@ -41,7 +50,7 @@
         <item>Xin liên hệ</item>
     </string-array>
     <string-array name="category4">
-        <item>Theo đơn vị tính</item>
+        <item>-----</item>
         <item>Theo 1 Kg</item>
         <item>Theo 1 gram</item>
         <item>Theo Bao/50kg</item>

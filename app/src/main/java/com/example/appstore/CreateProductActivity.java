@@ -65,9 +65,13 @@ public class CreateProductActivity extends AppCompatActivity implements AdapterV
 
 
         Spinner spinner = findViewById(R.id.spinnersanpham1);
+        Spinner spinner1 = findViewById(R.id.spinnersanpham2);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.category5, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this, R.array.category41, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
+        spinner1.setAdapter(adapter1);
         spinner.setOnItemSelectedListener(this);
         close1 = findViewById(R.id.close011);
         close1.setVisibility(View.INVISIBLE);

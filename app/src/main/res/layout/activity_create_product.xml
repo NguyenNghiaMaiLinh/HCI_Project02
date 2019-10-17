@@ -59,27 +59,29 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
                 android:orientation="horizontal">
+
                 <LinearLayout
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_marginTop="15dp"
                         android:id="@+id/selectImage00"
                         android:layout_width="36dp"
                         android:layout_height="36dp"
                         android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
                         android:onClick="openMethodCamera"
                         android:src="@drawable/ic_photo_camera_black_24dp" />
 
                     <TextView
                         android:id="@+id/txt_quantity2"
                         android:layout_width="wrap_content"
-                        android:layout_gravity="center"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:text="0/3" />
                 </LinearLayout>
+
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -96,8 +98,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
-                        android:onClick="close11"
                         android:background="@drawable/circleclose"
+                        android:onClick="close11"
                         android:src="@drawable/ic_close_black_24dp" />
                 </RelativeLayout>
 
@@ -117,8 +119,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
-                        android:onClick="close12"
                         android:background="@drawable/circleclose"
+                        android:onClick="close12"
                         android:src="@drawable/ic_close_black_24dp" />
                 </RelativeLayout>
 
@@ -137,9 +139,9 @@
                         android:id="@+id/close013"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:onClick="close13"
                         android:layout_marginLeft="70dp"
                         android:background="@drawable/circleclose"
+                        android:onClick="close13"
                         android:src="@drawable/ic_close_black_24dp" />
                 </RelativeLayout>
 
@@ -156,45 +158,120 @@
                 <EditText
                     android:layout_width="390dp"
                     android:layout_height="wrap_content"
-                    android:hint="Tên phân bón" />
+                    android:hint="Tên sản phẩm" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="*"
-                    android:textSize="20dp"
                     android:textColor="@android:color/holo_red_light"
-                    />
+                    android:textSize="20dp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <MultiAutoCompleteTextView
                     android:layout_width="390dp"
                     android:layout_height="wrap_content"
-                    android:maxLines="3"
-                    android:hint="Mô tả phân bón" />
+                    android:hint="Mô tả sản phẩm"
+                    android:maxLines="3" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="*"
-                    android:textSize="20dp"
                     android:textColor="@android:color/holo_red_light"
-                    />
+                    android:textSize="20dp" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <MultiAutoCompleteTextView
+                    android:layout_width="390dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Phụ kiện bao gồm"
+                    android:maxLines="3" />
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="*"-->
+                    <!--android:textColor="@android:color/holo_red_light"-->
+                    <!--android:textSize="20dp" />-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <MultiAutoCompleteTextView
+                    android:layout_width="390dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Kích thước sản phẩm"
+                    android:maxLines="3" />
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="*"-->
+                    <!--android:textColor="@android:color/holo_red_light"-->
+                    <!--android:textSize="20dp" />-->
+            </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_marginStart="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:text="Thể loại: "
+                android:textSize="18dp" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/category" />
+
+            <Spinner
+                android:id="@+id/spinnersanpham2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -238,41 +315,42 @@
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
-    <LinearLayout
-        android:id="@+id/LinearLayout01"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="30dp"
-        android:orientation="horizontal">
+        android:layout_marginTop="10dp">
 
-        <TextView
-            android:layout_gravity="center"
-            android:text="Đơn vị tính: "
-            android:layout_marginLeft="16dp"
-            android:textSize="18dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:id="@+id/LinearLayout01"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="20dp"
-            android:src="@drawable/category" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:text="Đơn vị tính: "
+                android:textSize="18dp" />
 
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/category" />
 
-
-        <Spinner
-            android:id="@+id/spinnersanpham1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center" />
-    </LinearLayout>
+            <Spinner
+                android:id="@+id/spinnersanpham1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

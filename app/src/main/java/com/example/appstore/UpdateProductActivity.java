@@ -53,7 +53,7 @@ public class UpdateProductActivity extends AppCompatActivity implements AdapterV
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update_product);
+        setContentView(R.layout.activity_update_product_1);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolBarId11232);
         setSupportActionBar(toolbar);
@@ -295,8 +295,8 @@ public class UpdateProductActivity extends AppCompatActivity implements AdapterV
         image3 = true;
     }
 
-    public void clickSave(View view) {
-        Intent intent = new Intent(getApplicationContext(), Store.class);
+    public void clickSave1(View view) {
+        Intent intent = new Intent(this, Store.class);
         Toast.makeText(UpdateProductActivity.this, "Thay đổi thông tin thành công !", Toast.LENGTH_LONG).show();
         startActivity(intent);
     }

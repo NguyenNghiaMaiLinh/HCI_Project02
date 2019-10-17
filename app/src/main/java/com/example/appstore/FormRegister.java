@@ -55,8 +55,8 @@ public class FormRegister extends AppCompatActivity {
             dienthoai.setError("Số điện thoại đang rỗng");
         } else if (email1.getText().toString().isEmpty()) {
             email1.setError("Email không đang rỗng");
-        } else if (!email1.getText().toString().matches(emailPattern)) {
-            Toast.makeText(this, "Email không hợp lệ", Toast.LENGTH_LONG).show();
+//        } else if (!email1.getText().toString().matches(emailPattern)) {
+//            Toast.makeText(this, "Email không hợp lệ", Toast.LENGTH_LONG).show();
 //        } else if (!spinner1.callOnClick()) {
 //            Toast.makeText(this, "Thành phố chưa được chọn", Toast.LENGTH_LONG).show();
 //        } else if (!spinner2.callOnClick()) {

@@ -80,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
     protected Dialog onOpenDialog() {
         return new AlertDialog.Builder(this)
                 .setIcon(R.drawable.ic_location)
-                .setTitle("Cho phép Nhà Vườn truy cập cị trí của thiết bị này?")
+                .setTitle("Cho phép Nhà Vườn truy cập vị trí của thiết bị này?")
                 .setPositiveButton("Cho phép",
                         new DialogInterface.OnClickListener() {
                             @Override

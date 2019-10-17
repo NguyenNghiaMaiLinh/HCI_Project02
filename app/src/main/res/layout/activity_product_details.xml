@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ProductDetails">
+
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
@@ -20,24 +21,25 @@
             app:expandedTitleMarginEnd="64dp"
             app:expandedTitleMarginStart="48dp"
             app:layout_scrollFlags="exitUntilCollapsed|scroll">
+
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar432"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:navigationIcon="?attr/homeAsUpIndicator"
-                >
+                app:navigationIcon="?attr/homeAsUpIndicator">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Thông tin sản phẩm"
                     android:textColor="@color/white"
-                    android:textSize="20dp"/>
-<!--                <ImageView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:src="@drawable/ic_shopping_cart_green_24dp"-->
-<!--                    android:layout_marginLeft="130dp"-->
-<!--                    android:onClick="onClickViewCart"/>-->
+                    android:textSize="20dp" />
+                <!--                <ImageView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:src="@drawable/ic_shopping_cart_green_24dp"-->
+                <!--                    android:layout_marginLeft="130dp"-->
+                <!--                    android:onClick="onClickViewCart"/>-->
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
@@ -50,7 +52,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
@@ -60,27 +62,30 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
+
                     <ImageView
                         android:layout_width="410dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/terrarium_senda_320k"/>
+                        android:src="@drawable/terrarium_senda_320k" />
+
                     <ImageView
                         android:layout_width="410dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/terrarium_senda_350k"/>
+                        android:src="@drawable/terrarium_senda_350k" />
+
                     <ImageView
                         android:layout_width="410dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/terrarium_350k"/>
+                        android:src="@drawable/terrarium_350k" />
                 </LinearLayout>
             </HorizontalScrollView>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:orientation="vertical"
                 android:paddingHorizontal="10dp"
-                android:paddingVertical="5dp"
-                android:orientation="vertical">
+                android:paddingVertical="5dp">
 
                 <!--Thông tin chung-->
                 <TextView
@@ -109,7 +114,7 @@
                         android:id="@+id/oldPrice"
                         android:layout_width="130dp"
                         android:layout_height="wrap_content"
-                        android:text="350.000đ"/>
+                        android:text="350.000đ" />
 
                 </LinearLayout>
 
@@ -117,49 +122,132 @@
                     android:id="@+id/textView10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:text="Cung cấp bởi Green Life Store" />
+                    android:text="Cung cấp bởi Green Life Store"
+                    android:textColor="@color/colorPrimaryDark" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_margin="10dp"
                     android:background="@color/lightgray" />
-                <View
-                    android:id="@+id/divider"
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp"
-                    android:backgroundTint="@color/white"
-                    android:background="?android:attr/listDivider" />
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Thông tin chi tiết"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="Kích thước"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:text="Đường kính 10cm \nCao 20cm"
+                            android:textColor="@color/black" />
+                    </TableRow>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/lightgray" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="Bao gồm"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:text="Sen đá, Đất trồng, Phụ kiện,
+                            Chậu thủy tinh hình tròn "
+                            android:textColor="@color/black" />
+                    </TableRow>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/lightgray" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="Loại"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:text="Tiểu cảnh"
+                            android:textColor="@color/black" />
+                    </TableRow>
+                </TableLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/lightgray" />
+                <!--mô tả sản phẩm-->
                 <!--mô tả sản phẩm-->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
                     android:text="Mô tả sản phẩm"
+                    android:textColor="@color/black"
                     android:textSize="18dp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="- Tiểu cảnh Sen Đá sẽ giúp bạn thư thái và thoải mái, trong những lúc làm việc căng thẳng" />
+                    android:text="- Tiểu cảnh Sen Đá sẽ giúp bạn thư thái và thoải mái, trong những lúc làm việc căng thẳng"
+                    android:textColor="@color/black" />
+
                 <View
                     android:id="@+id/divider2"
                     android:layout_width="match_parent"
                     android:layout_height="10dp"
-                    android:backgroundTint="@color/white"
-                    android:background="?android:attr/listDivider" />
+                    android:background="?android:attr/listDivider"
+                    android:backgroundTint="@color/white" />
                 <!--đánh giá-->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="Đánh giá và bình luận của khách hàng"
                     android:textColor="@color/black"
                     android:textSize="18dp"
-                    android:text="Đánh giá và bình luận của khách hàng"
-                    android:textStyle="bold"/>
-                
-                    <!--đánh giá của khách hàng-->
+                    android:textStyle="bold" />
+
+                <!--đánh giá của khách hàng-->
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -170,9 +258,9 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_marginLeft="20dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
                             android:layout_weight="1"
                             android:orientation="vertical"
                             android:paddingHorizontal="10dp"
@@ -203,11 +291,14 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                </androidx.cardview.widget.CardView> <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_margin="10dp"
-                android:background="@color/lightgray" />
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/lightgray" />
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -218,9 +309,9 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_marginLeft="20dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
                             android:layout_weight="1"
                             android:orientation="vertical"
                             android:paddingHorizontal="10dp"
@@ -251,11 +342,14 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                </androidx.cardview.widget.CardView> <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_margin="10dp"
-                android:background="@color/lightgray" />
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/lightgray" />
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -266,9 +360,9 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_marginLeft="20dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
                             android:layout_weight="1"
                             android:orientation="vertical"
                             android:paddingHorizontal="10dp"
@@ -299,11 +393,14 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                </androidx.cardview.widget.CardView> <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_margin="10dp"
-                android:background="@color/lightgray" />
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/lightgray" />
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -314,9 +411,9 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_marginLeft="20dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
                             android:layout_weight="1"
                             android:orientation="vertical"
                             android:paddingHorizontal="10dp"
@@ -347,11 +444,14 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                </androidx.cardview.widget.CardView> <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_margin="10dp"
-                android:background="@color/lightgray" />
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/lightgray" />
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -362,9 +462,9 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_marginLeft="20dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
                             android:layout_weight="1"
                             android:orientation="vertical"
                             android:paddingHorizontal="10dp"
@@ -406,13 +506,13 @@
     </ScrollView>
 
     <Button
-        style="@style/AppTheme.RoundedCornerMaterialButton"
         android:id="@+id/button"
+        style="@style/AppTheme.RoundedCornerMaterialButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClickViewCart"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="10dp"
+        android:onClick="onClickViewCart"
         android:text="Thay đổi thông tin" />
 </LinearLayout>

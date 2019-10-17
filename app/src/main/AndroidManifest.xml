@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/cay"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme.FullScreen">
         <activity android:name=".MyCameraActivity"></activity>
         <activity android:name=".ServicesDetailsActivity" />
         <activity android:name=".UpdateServiceActivity" />
@@ -48,7 +48,7 @@
         <activity android:name=".BookingListActivity" />
         <activity android:name=".BookingDetailsActivity" />
         <activity android:name=".BookingFinishedListActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".DashboardStoreActivity" />
         <activity android:name=".BookingFinishedDetailsActivity" />
         <activity android:name=".BookingRejectedListActivity" />
         <activity android:name=".BookingRejectedDetailsActivity" />
@@ -56,7 +56,7 @@
         <activity android:name=".BookingProcessingDetailsActivity" />
         <activity android:name=".ProductDetails" />
         <activity
-            android:name=".DashboardStoreActivity"
+            android:name=".LoginActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

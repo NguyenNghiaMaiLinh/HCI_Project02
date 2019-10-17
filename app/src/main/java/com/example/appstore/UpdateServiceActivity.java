@@ -285,8 +285,8 @@ public class UpdateServiceActivity extends AppCompatActivity implements AdapterV
         image3 = true;
     }
 
-    public void clickSave(View view) {
-        Intent intent = new Intent(getApplicationContext(), Store.class);
+    public void clickSave2(View view) {
+        Intent intent = new Intent(UpdateServiceActivity.this, Store.class);
         Toast.makeText(UpdateServiceActivity.this, "Thay đổi thông tin thành công !", Toast.LENGTH_LONG).show();
         startActivity(intent);
     }
